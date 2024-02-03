@@ -1,0 +1,256 @@
+1.9812 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+3.7112 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\mstmc.ttf
+4.0665 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\mstmc.ttf
+6.5977 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001EF99E9E9B0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001EF94239DD8>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.5979 	EXP 	window1: mouseVisible = True
+6.5980 	EXP 	window1: recordFrameIntervals = False
+6.7640 	EXP 	window1: recordFrameIntervals = True
+6.9475 	EXP 	window1: recordFrameIntervals = False
+7.4843 	EXP 	Created guide = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='guide', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='2-back\nture : m\nfalse: n', units='height', win=Window(...), wrapWidth=1)
+7.4878 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+7.4890 	EXP 	Created letter = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='letter', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.6388 	EXP 	guide: autoDraw = True
+8.6760 	EXP 	Imported con_1back.xlsx as conditions, 30 conditions, 3 params
+8.6764 	EXP 	Created sequence: sequential, trialTypes=30, nReps=1, seed=None
+8.6766 	EXP 	New trial (rep=0, index=0): {'index': 0, 'target': 0, 'corrAns': 'n'}
+8.6973 	EXP 	guide: autoDraw = False
+8.6973 	EXP 	letter: text = 'C'
+8.6973 	EXP 	fixation: autoDraw = True
+8.7004 	DATA 	Keypress: space
+9.1806 	EXP 	letter: autoDraw = True
+9.1972 	EXP 	fixation: autoDraw = False
+9.4198 	EXP 	New trial (rep=0, index=1): {'index': 0, 'target': 0, 'corrAns': 'n'}
+9.4306 	EXP 	fixation: autoDraw = False
+9.4306 	EXP 	letter: autoDraw = False
+9.4306 	EXP 	letter: text = 'R'
+9.4306 	EXP 	fixation: autoDraw = True
+9.4332 	DATA 	Keypress: n
+9.9306 	EXP 	fixation: autoDraw = False
+9.9306 	EXP 	letter: autoDraw = True
+10.1182 	EXP 	New trial (rep=0, index=2): {'index': 0, 'target': 0, 'corrAns': 'n'}
+10.1305 	EXP 	fixation: autoDraw = False
+10.1305 	EXP 	letter: autoDraw = False
+10.1305 	EXP 	letter: text = 'M'
+10.1305 	EXP 	fixation: autoDraw = True
+10.1333 	DATA 	Keypress: m
+10.6139 	EXP 	letter: autoDraw = True
+10.6306 	EXP 	fixation: autoDraw = False
+10.8349 	EXP 	New trial (rep=0, index=3): {'index': 0.001981409606440776, 'target': 0, 'corrAns': 'n'}
+10.8472 	EXP 	fixation: autoDraw = False
+10.8472 	EXP 	letter: autoDraw = False
+10.8472 	EXP 	letter: text = 'Q'
+10.8472 	EXP 	fixation: autoDraw = True
+10.8494 	DATA 	Keypress: n
+11.3306 	EXP 	letter: autoDraw = True
+11.3472 	EXP 	fixation: autoDraw = False
+11.5852 	EXP 	New trial (rep=0, index=4): {'index': 0.7553492802028269, 'target': 0, 'corrAns': 'n'}
+11.5972 	EXP 	fixation: autoDraw = False
+11.5972 	EXP 	letter: autoDraw = False
+11.5972 	EXP 	letter: text = 'G'
+11.5972 	EXP 	fixation: autoDraw = True
+11.5997 	DATA 	Keypress: m
+12.0806 	EXP 	letter: autoDraw = True
+12.0973 	EXP 	fixation: autoDraw = False
+12.2685 	EXP 	New trial (rep=0, index=5): {'index': 0.9512648571943241, 'target': 1, 'corrAns': 'm'}
+12.2806 	EXP 	fixation: autoDraw = False
+12.2806 	EXP 	letter: autoDraw = False
+12.2806 	EXP 	letter: text = 'Z'
+12.2806 	EXP 	fixation: autoDraw = True
+12.2838 	DATA 	Keypress: n
+12.7639 	EXP 	letter: autoDraw = True
+12.7806 	EXP 	fixation: autoDraw = False
+13.0185 	EXP 	New trial (rep=0, index=6): {'index': 0.2134870330247115, 'target': 1, 'corrAns': 'm'}
+13.0306 	EXP 	fixation: autoDraw = False
+13.0306 	EXP 	letter: autoDraw = False
+13.0306 	EXP 	letter: text = 'G'
+13.0306 	EXP 	fixation: autoDraw = True
+13.0336 	DATA 	Keypress: m
+13.5140 	EXP 	letter: autoDraw = True
+13.5307 	EXP 	fixation: autoDraw = False
+13.7010 	EXP 	New trial (rep=0, index=7): {'index': 0.10845393915191315, 'target': 1, 'corrAns': 'm'}
+13.7044 	DATA 	Keypress: n
+13.7140 	EXP 	fixation: autoDraw = False
+13.7140 	EXP 	letter: autoDraw = False
+13.7140 	EXP 	letter: text = 'Z'
+13.7140 	EXP 	fixation: autoDraw = True
+14.1974 	EXP 	letter: autoDraw = True
+14.2140 	EXP 	fixation: autoDraw = False
+14.4019 	EXP 	New trial (rep=0, index=8): {'index': 0.43907100522523446, 'target': 1, 'corrAns': 'm'}
+14.4140 	EXP 	fixation: autoDraw = False
+14.4140 	EXP 	letter: autoDraw = False
+14.4140 	EXP 	letter: text = 'G'
+14.4140 	EXP 	fixation: autoDraw = True
+14.4176 	DATA 	Keypress: m
+14.8977 	EXP 	letter: autoDraw = True
+14.9143 	EXP 	fixation: autoDraw = False
+15.0848 	EXP 	New trial (rep=0, index=9): {'index': 0.3518610876898747, 'target': 0, 'corrAns': 'n'}
+15.0974 	EXP 	fixation: autoDraw = False
+15.0974 	EXP 	letter: autoDraw = False
+15.0974 	EXP 	letter: text = 'Z'
+15.0974 	EXP 	fixation: autoDraw = True
+15.1006 	DATA 	Keypress: m
+15.5807 	EXP 	letter: autoDraw = True
+15.5974 	EXP 	fixation: autoDraw = False
+15.8683 	EXP 	New trial (rep=0, index=10): {'index': 0.6410238109701539, 'target': 1, 'corrAns': 'm'}
+15.8807 	EXP 	fixation: autoDraw = False
+15.8807 	EXP 	letter: autoDraw = False
+15.8807 	EXP 	letter: text = 'A'
+15.8807 	EXP 	fixation: autoDraw = True
+15.8841 	DATA 	Keypress: n
+16.3642 	EXP 	letter: autoDraw = True
+16.3808 	EXP 	fixation: autoDraw = False
+16.5183 	EXP 	New trial (rep=0, index=11): {'index': 0.04353889354530027, 'target': 0, 'corrAns': 'n'}
+16.5308 	EXP 	fixation: autoDraw = False
+16.5308 	EXP 	letter: autoDraw = False
+16.5308 	EXP 	letter: text = 'Z'
+16.5308 	EXP 	fixation: autoDraw = True
+16.5341 	DATA 	Keypress: m
+17.0142 	EXP 	letter: autoDraw = True
+17.0308 	EXP 	fixation: autoDraw = False
+17.1688 	EXP 	New trial (rep=0, index=12): {'index': 0.29419527327031003, 'target': 0, 'corrAns': 'n'}
+17.1808 	EXP 	fixation: autoDraw = False
+17.1808 	EXP 	letter: autoDraw = False
+17.1808 	EXP 	letter: text = 'V'
+17.1808 	EXP 	fixation: autoDraw = True
+17.1831 	DATA 	Keypress: m
+17.6641 	EXP 	letter: autoDraw = True
+17.6808 	EXP 	fixation: autoDraw = False
+17.7686 	EXP 	New trial (rep=0, index=13): {'index': 0.9129133985926111, 'target': 0, 'corrAns': 'n'}
+17.7808 	EXP 	fixation: autoDraw = False
+17.7808 	EXP 	letter: autoDraw = False
+17.7808 	EXP 	letter: text = 'E'
+17.7808 	EXP 	fixation: autoDraw = True
+17.7836 	DATA 	Keypress: m
+18.2641 	EXP 	letter: autoDraw = True
+18.2808 	EXP 	fixation: autoDraw = False
+18.5185 	EXP 	New trial (rep=0, index=14): {'index': 0.6549133335540842, 'target': 0, 'corrAns': 'n'}
+18.5307 	EXP 	fixation: autoDraw = False
+18.5307 	EXP 	letter: autoDraw = False
+18.5307 	EXP 	letter: text = 'O'
+18.5307 	EXP 	fixation: autoDraw = True
+18.5337 	DATA 	Keypress: m
+19.0142 	EXP 	letter: autoDraw = True
+19.0309 	EXP 	fixation: autoDraw = False
+19.1021 	EXP 	New trial (rep=0, index=15): {'index': 0.1487718190811983, 'target': 0, 'corrAns': 'n'}
+19.1142 	EXP 	fixation: autoDraw = False
+19.1142 	EXP 	letter: autoDraw = False
+19.1142 	EXP 	letter: text = 'Z'
+19.1142 	EXP 	fixation: autoDraw = True
+19.1168 	DATA 	Keypress: m
+19.5975 	EXP 	letter: autoDraw = True
+19.6143 	EXP 	fixation: autoDraw = False
+19.7544 	EXP 	New trial (rep=0, index=16): {'index': 0.6404397631135144, 'target': 0, 'corrAns': 'n'}
+19.7810 	EXP 	fixation: autoDraw = False
+19.7810 	EXP 	letter: autoDraw = False
+19.7810 	EXP 	letter: text = 'S'
+19.7810 	EXP 	fixation: autoDraw = True
+19.7853 	DATA 	Keypress: m
+20.2642 	EXP 	letter: autoDraw = True
+20.2809 	EXP 	fixation: autoDraw = False
+20.4849 	EXP 	New trial (rep=0, index=17): {'index': 0.32928222064526247, 'target': 0, 'corrAns': 'n'}
+20.4975 	EXP 	fixation: autoDraw = False
+20.4975 	EXP 	letter: autoDraw = False
+20.4975 	EXP 	letter: text = 'B'
+20.4975 	EXP 	fixation: autoDraw = True
+20.5002 	DATA 	Keypress: m
+20.9810 	EXP 	letter: autoDraw = True
+20.9976 	EXP 	fixation: autoDraw = False
+21.3351 	EXP 	New trial (rep=0, index=18): {'index': 0.5867234930032228, 'target': 0, 'corrAns': 'n'}
+21.3475 	EXP 	fixation: autoDraw = False
+21.3475 	EXP 	letter: autoDraw = False
+21.3475 	EXP 	letter: text = 'C'
+21.3475 	EXP 	fixation: autoDraw = True
+21.3504 	DATA 	Keypress: m
+21.8309 	EXP 	letter: autoDraw = True
+21.8475 	EXP 	fixation: autoDraw = False
+22.0016 	EXP 	New trial (rep=0, index=19): {'index': 0.04045104275656186, 'target': 0, 'corrAns': 'n'}
+22.0142 	EXP 	fixation: autoDraw = False
+22.0142 	EXP 	letter: autoDraw = False
+22.0142 	EXP 	letter: text = 'I'
+22.0142 	EXP 	fixation: autoDraw = True
+22.0169 	DATA 	Keypress: m
+22.4976 	EXP 	letter: autoDraw = True
+22.5143 	EXP 	fixation: autoDraw = False
+22.6187 	EXP 	New trial (rep=0, index=20): {'index': 0.4494925854225601, 'target': 1, 'corrAns': 'm'}
+22.6309 	EXP 	fixation: autoDraw = False
+22.6309 	EXP 	letter: autoDraw = False
+22.6309 	EXP 	letter: text = 'E'
+22.6309 	EXP 	fixation: autoDraw = True
+22.6336 	DATA 	Keypress: m
+23.1143 	EXP 	letter: autoDraw = True
+23.1309 	EXP 	fixation: autoDraw = False
+23.3019 	EXP 	New trial (rep=0, index=21): {'index': 0.34267699739521096, 'target': 0, 'corrAns': 'n'}
+23.3143 	EXP 	fixation: autoDraw = False
+23.3143 	EXP 	letter: autoDraw = False
+23.3143 	EXP 	letter: text = 'I'
+23.3143 	EXP 	fixation: autoDraw = True
+23.3172 	DATA 	Keypress: m
+23.7978 	EXP 	letter: autoDraw = True
+23.8143 	EXP 	fixation: autoDraw = False
+23.8865 	EXP 	New trial (rep=0, index=22): {'index': 0.10590143364993143, 'target': 1, 'corrAns': 'm'}
+23.9143 	EXP 	fixation: autoDraw = False
+23.9143 	EXP 	letter: autoDraw = False
+23.9143 	EXP 	letter: text = 'H'
+23.9143 	EXP 	fixation: autoDraw = True
+23.9171 	DATA 	Keypress: m
+24.3976 	EXP 	letter: autoDraw = True
+24.4143 	EXP 	fixation: autoDraw = False
+24.5361 	EXP 	New trial (rep=0, index=23): {'index': 0.29313520573269913, 'target': 0, 'corrAns': 'n'}
+24.5476 	EXP 	fixation: autoDraw = False
+24.5476 	EXP 	letter: autoDraw = False
+24.5476 	EXP 	letter: text = 'I'
+24.5476 	EXP 	fixation: autoDraw = True
+24.5510 	DATA 	Keypress: m
+25.0310 	EXP 	letter: autoDraw = True
+25.0475 	EXP 	fixation: autoDraw = False
+25.2688 	EXP 	New trial (rep=0, index=24): {'index': 0.8288357386657205, 'target': 0, 'corrAns': 'n'}
+25.2809 	EXP 	fixation: autoDraw = False
+25.2809 	EXP 	letter: autoDraw = False
+25.2809 	EXP 	letter: text = 'I'
+25.2809 	EXP 	fixation: autoDraw = True
+25.2837 	DATA 	Keypress: m
+25.7642 	EXP 	letter: autoDraw = True
+25.7809 	EXP 	fixation: autoDraw = False
+25.9529 	EXP 	New trial (rep=0, index=25): {'index': 0.6195695797198737, 'target': 0, 'corrAns': 'n'}
+25.9643 	EXP 	fixation: autoDraw = False
+25.9643 	EXP 	letter: autoDraw = False
+25.9643 	EXP 	letter: text = 'Z'
+25.9643 	EXP 	fixation: autoDraw = True
+25.9669 	DATA 	Keypress: m
+26.4476 	EXP 	letter: autoDraw = True
+26.4642 	EXP 	fixation: autoDraw = False
+26.5521 	EXP 	New trial (rep=0, index=26): {'index': 0.5751796890283638, 'target': 1, 'corrAns': 'm'}
+26.5642 	EXP 	fixation: autoDraw = False
+26.5642 	EXP 	letter: autoDraw = False
+26.5642 	EXP 	letter: text = 'Y'
+26.5642 	EXP 	fixation: autoDraw = True
+26.5677 	DATA 	Keypress: m
+27.0476 	EXP 	letter: autoDraw = True
+27.0643 	EXP 	fixation: autoDraw = False
+27.2357 	EXP 	New trial (rep=0, index=27): {'index': 0.9892790042792996, 'target': 1, 'corrAns': 'm'}
+27.2476 	EXP 	fixation: autoDraw = False
+27.2476 	EXP 	letter: autoDraw = False
+27.2476 	EXP 	letter: text = 'Z'
+27.2476 	EXP 	fixation: autoDraw = True
+27.2504 	DATA 	Keypress: m
+27.7309 	EXP 	letter: autoDraw = True
+27.7476 	EXP 	fixation: autoDraw = False
+27.8016 	EXP 	New trial (rep=0, index=28): {'index': 0.2531254724771844, 'target': 1, 'corrAns': 'm'}
+27.8142 	EXP 	fixation: autoDraw = False
+27.8142 	EXP 	letter: autoDraw = False
+27.8142 	EXP 	letter: text = 'Y'
+27.8142 	EXP 	fixation: autoDraw = True
+27.8168 	DATA 	Keypress: m
+28.2976 	EXP 	letter: autoDraw = True
+28.3143 	EXP 	fixation: autoDraw = False
+28.4192 	EXP 	New trial (rep=0, index=29): {'index': 0.9233911074666465, 'target': 0, 'corrAns': 'n'}
+28.4246 	DATA 	Keypress: m
+28.4310 	EXP 	fixation: autoDraw = False
+28.4310 	EXP 	letter: autoDraw = False
+28.4310 	EXP 	letter: text = 'Z'
+28.4310 	EXP 	fixation: autoDraw = True
+28.9143 	EXP 	letter: autoDraw = True
+28.9309 	EXP 	fixation: autoDraw = False
+28.9809 	EXP 	fixation: autoDraw = False
+28.9809 	EXP 	letter: autoDraw = False
+29.0560 	EXP 	window1: mouseVisible = True
