@@ -58,7 +58,7 @@
       <CodeComponent name="code2">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;&amp;#10;letters = [chr(i) for i in range(ord('A'), ord('Z')+1)]&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;&amp;#10;letters = [chr(i) for i in range(ord('A'), ord('Z')+1)]&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var letters;&amp;#10;letters = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(ord(&quot;A&quot;), (ord(&quot;Z&quot;) + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(chr(i));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="target = eval((&quot;target&quot; + n.toString()));&amp;#10;corrAns = eval((&quot;corrAns&quot; + n.toString()));&amp;#10;thisLetter = np.random.choice(letters);&amp;#10;letterSelected = false;&amp;#10;if ((! target)) {&amp;#10;    while ((! letterSelected)) {&amp;#10;        thisLetter = np.random.choice(letters);&amp;#10;        if (((presentedLetters.length &lt; n) || (thisLetter !== presentedLetters.slice((- n))[0]))) {&amp;#10;            letterSelected = true;&amp;#10;        }&amp;#10;    }&amp;#10;} else {&amp;#10;    thisLetter = presentedLetters.slice((- n))[0];&amp;#10;}&amp;#10;presentedLetters.push(thisLetter);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# 初始化target和corrAns&amp;#10;target = eval(&quot;target&quot; + str(n))&amp;#10;corrAns = eval(&quot;corrAns&quot; + str(n))&amp;#10;&amp;#10;&amp;#10;thisLetter = np.random.choice(letters)&amp;#10;letterSelected = False # a boolean to state a letter has not yet been selected&amp;#10;if not target: # this is not a target trial&amp;#10;        while not letterSelected: # repeat the content of this loop until a letter is selected&amp;#10;            thisLetter = np.random.choice(letters)# if this is not a target then randomly choose&amp;#10;            if len(presentedLetters) &lt; n or thisLetter != presentedLetters[-n]: # if n letters have not yet been presented, or this is not the same as the n-th trial back&amp;#10;                letterSelected = True # accept this as the chosen letter&amp;#10;else:&amp;#10;        thisLetter = presentedLetters[-n]# if this was a target choose the n'th back&amp;#10;presentedLetters.append(thisLetter)" valType="extendedCode"/>
@@ -67,8 +67,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="psychoJS.experiment.addData(&quot;corrAns&quot;, corrAns);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;corrAns&quot;, corrAns)" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="psychoJS.experiment.addData(&quot;corrAns&quot;, corrAns);&amp;#10;if (((resp_Letter.corr === 1) &amp;&amp; (target === 1))) {&amp;#10;    NumTarget += 1;&amp;#10;}&amp;#10;if (((resp_Letter.corr === 1) &amp;&amp; (target === 0))) {&amp;#10;    NumNonTarget += 1;&amp;#10;}&amp;#10;if ((target === 1)) {&amp;#10;    NumTar += 1;&amp;#10;} else {&amp;#10;    NumNonTar += 1;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;corrAns&quot;, corrAns)&amp;#10;&amp;#10;if resp_Letter.corr == 1 and target == 1:&amp;#10;    NumTarget += 1&amp;#10;&amp;#10;if resp_Letter.corr == 1 and target == 0:&amp;#10;    NumNonTarget += 1&amp;#10;&amp;#10;if target == 1:&amp;#10;    NumTar += 1&amp;#10;else:&amp;#10;    NumNonTar += 1" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code2" valType="code"/>
       </CodeComponent>
@@ -186,15 +186,76 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="feedback2block"/>
+    <Routine name="feedback2block">
+      <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="rate_T = (NumTarget / NumTar);&amp;#10;rate_NT = (NumNonTarget / NumNonTar);&amp;#10;feedback = ((((&quot;\u4f60\u5b8c\u6210\u9776\u5b50\u4efb\u52a1\u7684\u6b63\u786e\u7387\u4e3a\uff1a&quot; + Math.round((rate_T * 100), 2).toString()) + &quot;%\n\u4f60\u5b8c\u6210\u975e\u9776\u5b50\u4efb\u52a1\u7684\u6b63\u786e\u7387\u4e3a\uff1a&quot;) + Math.round((rate_NT * 100), 2).toString()) + &quot;%&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="rate_T = NumTarget / NumTar&amp;#10;rate_NT = NumNonTarget / NumNonTar&amp;#10;&amp;#10;feedback = &quot;你完成靶子任务的正确率为：&quot; + str(round(rate_T*100,2)) + &quot;%\n你完成非靶子任务的正确率为：&quot; + str(round(rate_NT*100,2)) + &quot;%&quot;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="FB">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="num"/>
+        <Param name="name" updates="None" val="FB" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$feedback" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="resp_feedback">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="resp_feedback" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
     <Routine name="newBlock">
       <CodeComponent name="code">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="n = Lv_Diff;&amp;#10;presentedLetters = ([0] * n);&amp;#10;NumTarget = 0;&amp;#10;NumNonTarget = 0;&amp;#10;target = eval((&quot;target&quot; + n.toString()));&amp;#10;corrAns = eval((&quot;corrAns&quot; + n.toString()));&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="n = Lv_Diff # first specify the n condition of the trial/block&amp;#10;presentedLetters = [0]*n&amp;#10;&amp;#10;# 初始化反馈计数器&amp;#10;NumTarget = 0&amp;#10;NumNonTarget = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="n = Lv_Diff;&amp;#10;presentedLetters = ([0] * n);&amp;#10;NumTarget = 0;&amp;#10;NumNonTarget = 0;&amp;#10;NumTar = 0;&amp;#10;NumNonTar = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="n = Lv_Diff # first specify the n condition of the trial/block&amp;#10;presentedLetters = [0]*n&amp;#10;&amp;#10;# 初始化正确计数器&amp;#10;NumTarget = 0&amp;#10;NumNonTarget = 0&amp;#10;&amp;#10;# 初始化Target/NonTarget计数器&amp;#10;NumTar = 0&amp;#10;NumNonTar = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -244,6 +305,51 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Endexp">
+      <TextComponent name="text">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Thanks for participation!" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="resp_end">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="resp_end" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -253,7 +359,7 @@
   <Flow>
     <Routine name="instr"/>
     <LoopInitiator loopType="TrialHandler" name="blocks">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="Selected rows" updates="None" val="5" valType="str"/>
       <Param name="conditions" updates="None" val="[{'Lv_Diff': 1, 'color_Diff': 'black'}, {'Lv_Diff': 2, 'color_Diff': 'red'}, {'Lv_Diff': 3, 'color_Diff': 'blue'}, {'Lv_Diff': 4, 'color_Diff': 'purple'}, {'Lv_Diff': 5, 'color_Diff': 'green'}, {'Lv_Diff': 6, 'color_Diff': 'brown'}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="con_block.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -279,5 +385,6 @@
     <LoopTerminator name="trials"/>
     <Routine name="feedback2block"/>
     <LoopTerminator name="blocks"/>
+    <Routine name="Endexp"/>
   </Flow>
 </PsychoPy2experiment>
