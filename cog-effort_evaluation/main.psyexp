@@ -58,8 +58,8 @@
       <CodeComponent name="code">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;&amp;#10;# 初始化价值&amp;#10;value4low_red = 1&amp;#10;value4low_blue = 1&amp;#10;value4low_brown = 1&amp;#10;value4low_purple = 1&amp;#10;value4low_green = 1&amp;#10;&amp;#10;# 初始化价值变化单位&amp;#10;unit_red = 1&amp;#10;unit_blue = 1&amp;#10;unit_brown = 1&amp;#10;unit_purple = 1&amp;#10;unit_green = 1&amp;#10;&amp;#10;# 初始化轮次&amp;#10;round_red = 0&amp;#10;round_blue = 0&amp;#10;round_brown = 0&amp;#10;round_purple = 0&amp;#10;round_green = 0&amp;#10;&amp;#10;# 初始化按钮&amp;#10;buttonText1 = 0&amp;#10;buttonText2 = 0&amp;#10;positions = [(-0.4, -0.12), (0.4, -0.12)]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var buttonText1, buttonText2, positions, round_blue, round_brown, round_green, round_purple, round_red, unit_blue, unit_brown, unit_green, unit_purple, unit_red, value4low_blue, value4low_brown, value4low_green, value4low_purple, value4low_red;&amp;#10;value4low_red = 1;&amp;#10;value4low_blue = 1;&amp;#10;value4low_brown = 1;&amp;#10;value4low_purple = 1;&amp;#10;value4low_green = 1;&amp;#10;unit_red = 1;&amp;#10;unit_blue = 1;&amp;#10;unit_brown = 1;&amp;#10;unit_purple = 1;&amp;#10;unit_green = 1;&amp;#10;round_red = 0;&amp;#10;round_blue = 0;&amp;#10;round_brown = 0;&amp;#10;round_purple = 0;&amp;#10;round_green = 0;&amp;#10;buttonText1 = 0;&amp;#10;buttonText2 = 0;&amp;#10;positions = [[(- 0.4), (- 0.12)], [0.4, (- 0.12)]];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;&amp;#10;# 初始化价值&amp;#10;value4low_red = 1&amp;#10;value4low_blue = 1&amp;#10;value4low_brown = 1&amp;#10;value4low_purple = 1&amp;#10;value4low_green = 1&amp;#10;&amp;#10;# 初始化价值变化单位&amp;#10;unit_red = 1&amp;#10;unit_blue = 1&amp;#10;unit_brown = 1&amp;#10;unit_purple = 1&amp;#10;unit_green = 1&amp;#10;&amp;#10;# 初始化轮次&amp;#10;round_red = 0&amp;#10;round_blue = 0&amp;#10;round_brown = 0&amp;#10;round_purple = 0&amp;#10;round_green = 0&amp;#10;&amp;#10;# 初始化按钮&amp;#10;buttonText1 = 0&amp;#10;buttonText2 = 0&amp;#10;positions = [(-0.4, -0.12), (0.4, -0.12)]&amp;#10;&amp;#10;# 初始化选项记录&amp;#10;Choices = list()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        import * as random from 'random';&amp;#10;var Choices, buttonText1, buttonText2, positions, round_blue, round_brown, round_green, round_purple, round_red, unit_blue, unit_brown, unit_green, unit_purple, unit_red, value4low_blue, value4low_brown, value4low_green, value4low_purple, value4low_red;&amp;#10;value4low_red = 1;&amp;#10;value4low_blue = 1;&amp;#10;value4low_brown = 1;&amp;#10;value4low_purple = 1;&amp;#10;value4low_green = 1;&amp;#10;unit_red = 1;&amp;#10;unit_blue = 1;&amp;#10;unit_brown = 1;&amp;#10;unit_purple = 1;&amp;#10;unit_green = 1;&amp;#10;round_red = 0;&amp;#10;round_blue = 0;&amp;#10;round_brown = 0;&amp;#10;round_purple = 0;&amp;#10;round_green = 0;&amp;#10;buttonText1 = 0;&amp;#10;buttonText2 = 0;&amp;#10;positions = [[(- 0.4), (- 0.12)], [0.4, (- 0.12)]];&amp;#10;Choices = list();&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="buttonText1 = (Math.round(eval((&quot;value4low_&quot; + colorName)), 2).toString() + &quot;\uffe5\u6765\u5b8c\u6210\n\u4e00\u4e2a\u9ed1\u8272\u4efb\u52a1&quot;);&amp;#10;buttonText2 = ((&quot;2\uffe5\u6765\u5b8c\u6210\n\u4e00\u4e2a&quot; + color) + &quot;\u4efb\u52a1&quot;);&amp;#10;random.shuffle(positions);&amp;#10;position1 = positions[0];&amp;#10;position2 = positions[1];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="#设置选项文本&amp;#10;buttonText1 = str(round(eval(&quot;value4low_&quot; + colorName),2)) + &quot;￥来完成\n一个黑色任务&quot;&amp;#10;&amp;#10;&amp;#10;&amp;#10;buttonText2 = &quot;2￥来完成\n一个&quot; + color + &quot;任务&quot;&amp;#10;&amp;#10;# 设定位置，x小于0位于左侧&amp;#10;random.shuffle(positions)&amp;#10;position1 = positions[0]&amp;#10;position2 = positions[1]" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -67,8 +67,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisPosition = position1;&amp;#10;thisColor = colorName;&amp;#10;thisUnit = eval((&quot;unit_&quot; + colorName));&amp;#10;exec((((&quot;unit_&quot; + colorName) + &quot; = &quot;) + (thisUnit / 2).toString()));&amp;#10;thisValue = eval((&quot;value4low_&quot; + colorName));&amp;#10;if ((thisPosition[0] &lt; 0)) {&amp;#10;    if ((resp_CEP.keys === &quot;n&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((resp_CEP.keys === &quot;m&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;}&amp;#10;if ((preference === 1)) {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue + (thisUnit / 2)).toString()));&amp;#10;} else {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue - (thisUnit / 2)).toString()));&amp;#10;}&amp;#10;resultvalue = eval((&quot;value4low_&quot; + colorName));&amp;#10;exec((((&quot;round_&quot; + colorName) + &quot;=&quot;) + ((&quot;round_&quot; + colorName) + &quot; + 1&quot;).toString()));&amp;#10;rounds = eval((&quot;round_&quot; + colorName));&amp;#10;psychoJS.experiment.addData(&quot;preference&quot;, preference);&amp;#10;psychoJS.experiment.addData(&quot;thisvalue&quot;, thisValue);&amp;#10;psychoJS.experiment.addData(&quot;round&quot;, rounds);&amp;#10;psychoJS.experiment.addData(&quot;result&quot;, resultvalue);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# 记录下button1的位置&amp;#10;thisPosition = position1&amp;#10;&amp;#10;#记录下当前的颜色&amp;#10;thisColor = colorName&amp;#10;&amp;#10;# 记录当前试次使用的单位&amp;#10;thisUnit = eval(&quot;unit_&quot; + colorName)&amp;#10;&amp;#10;# 设置该颜色下一轮使用的单位&amp;#10;exec(&quot;unit_&quot; + colorName + &quot; = &quot; + str(thisUnit/2))&amp;#10;&amp;#10;# 记录当前轮次value&amp;#10;thisValue = eval(&quot;value4low_&quot; + colorName)&amp;#10;&amp;#10;# 记录下此时被试选择了 high effort(2) or low effort(1)&amp;#10;if thisPosition[0] &lt; 0:&amp;#10;    if resp_CEP.keys == &quot;n&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;else:&amp;#10;    if resp_CEP.keys == &quot;m&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;&amp;#10;#设置下一轮使用的LowEffort值&amp;#10;if preference == 1:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue + thisUnit/2))&amp;#10;else:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue - thisUnit/2))&amp;#10;&amp;#10;resultvalue = eval(&quot;value4low_&quot; + colorName)&amp;#10;exec(&quot;round_&quot; + colorName + &quot;=&quot; + str(&quot;round_&quot; + colorName + &quot; + 1&quot;))&amp;#10;rounds = eval(&quot;round_&quot; + colorName)&amp;#10;&amp;#10;# 记录信息&amp;#10;thisExp.addData(&quot;preference&quot;, preference)&amp;#10;thisExp.addData(&quot;thisvalue&quot;, thisValue)&amp;#10;thisExp.addData(&quot;round&quot;, rounds)&amp;#10;thisExp.addData(&quot;result&quot;, resultvalue)&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        thisPosition = position1;&amp;#10;thisColor = colorName;&amp;#10;thisUnit = eval((&quot;unit_&quot; + colorName));&amp;#10;exec((((&quot;unit_&quot; + colorName) + &quot; = &quot;) + (thisUnit / 2).toString()));&amp;#10;thisValue = eval((&quot;value4low_&quot; + colorName));&amp;#10;if ((thisPosition[0] &lt; 0)) {&amp;#10;    if ((resp_CEP.keys === &quot;n&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((resp_CEP.keys === &quot;m&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;}&amp;#10;if ((preference === 1)) {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue + (thisUnit / 2)).toString()));&amp;#10;    thisChoice = list([&quot;\u9ed1\u8272&quot;, thisValue]);&amp;#10;} else {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue - (thisUnit / 2)).toString()));&amp;#10;    thisChoice = list([color, 2]);&amp;#10;}&amp;#10;resultvalue = eval((&quot;value4low_&quot; + colorName));&amp;#10;exec((((&quot;round_&quot; + colorName) + &quot;=&quot;) + ((&quot;round_&quot; + colorName) + &quot; + 1&quot;).toString()));&amp;#10;rounds = eval((&quot;round_&quot; + colorName));&amp;#10;Choices.push(thisChoice);&amp;#10;psychoJS.experiment.addData(&quot;preference&quot;, preference);&amp;#10;psychoJS.experiment.addData(&quot;thisvalue&quot;, thisValue);&amp;#10;psychoJS.experiment.addData(&quot;round&quot;, rounds);&amp;#10;psychoJS.experiment.addData(&quot;result&quot;, resultvalue);&amp;#10;psychoJS.experiment.addData(&quot;choice&quot;, thisChoice);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# 记录下button1的位置&amp;#10;thisPosition = position1&amp;#10;&amp;#10;#记录下当前的颜色&amp;#10;thisColor = colorName&amp;#10;&amp;#10;# 记录当前试次使用的单位&amp;#10;thisUnit = eval(&quot;unit_&quot; + colorName)&amp;#10;&amp;#10;# 设置该颜色下一轮使用的单位&amp;#10;exec(&quot;unit_&quot; + colorName + &quot; = &quot; + str(thisUnit/2))&amp;#10;&amp;#10;# 记录当前轮次value&amp;#10;thisValue = eval(&quot;value4low_&quot; + colorName)&amp;#10;&amp;#10;# 记录下此时被试选择了 high effort(2) or low effort(1)&amp;#10;if thisPosition[0] &lt; 0:&amp;#10;    if resp_CEP.keys == &quot;n&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;else:&amp;#10;    if resp_CEP.keys == &quot;m&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;#设置下一轮使用的LowEffort值&amp;#10;if preference == 1:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue + thisUnit/2))&amp;#10;    thisChoice = list([&quot;黑色&quot;, thisValue])&amp;#10;else:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue - thisUnit/2))&amp;#10;    thisChoice = list([color, 2])&amp;#10;&amp;#10;resultvalue = eval(&quot;value4low_&quot; + colorName)&amp;#10;exec(&quot;round_&quot; + colorName + &quot;=&quot; + str(&quot;round_&quot; + colorName + &quot; + 1&quot;))&amp;#10;rounds = eval(&quot;round_&quot; + colorName)&amp;#10;Choices.append(thisChoice)&amp;#10;&amp;#10;# 记录信息&amp;#10;thisExp.addData(&quot;preference&quot;, preference)&amp;#10;thisExp.addData(&quot;thisvalue&quot;, thisValue)&amp;#10;thisExp.addData(&quot;round&quot;, rounds)&amp;#10;thisExp.addData(&quot;result&quot;, resultvalue)&amp;#10;thisExp.addData(&quot;choice&quot;, thisChoice)&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code" valType="code"/>
       </CodeComponent>
@@ -211,6 +211,68 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="end">
+      <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="f_choice = random.sample(Choices, 1);&amp;#10;endInstr = (((((&quot;\u968f\u673a\u62bd\u9009\u7684\u7ed3\u679c\u4e3a\uff1a\n&quot; + &quot;\u83b7\u5f97&quot;) + Math.round(f_choice[0][1], 2).toString()) + &quot;\uffe5\u7684&quot;) + f_choice[0][0].toString()) + &quot;\u4efb\u52a1&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="f_choice = random.sample(Choices,1)&amp;#10;&amp;#10;endInstr = &quot;随机抽选的结果为：\n&quot; + &quot;获得&quot; + str(round(f_choice[0][1],2)) + &quot;￥的&quot; + str(f_choice[0][0]) + &quot;任务&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="text_end">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="text_end" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$endInstr" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="resp_end">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="resp_end" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="instr"/>
@@ -227,5 +289,6 @@
     </LoopInitiator>
     <Routine name="trial"/>
     <LoopTerminator name="trials"/>
+    <Routine name="end"/>
   </Flow>
 </PsychoPy2experiment>

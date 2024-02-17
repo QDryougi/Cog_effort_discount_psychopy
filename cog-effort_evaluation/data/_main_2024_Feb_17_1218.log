@@ -1,0 +1,353 @@
+1.8468 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+3.8629 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\mstmc.ttf
+4.2211 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\mstmc.ttf
+6.1372 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+7.0225 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002396ABFFD68>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023965F081D0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.0227 	EXP 	window1: mouseVisible = True
+7.0228 	EXP 	window1: recordFrameIntervals = False
+7.1889 	EXP 	window1: recordFrameIntervals = True
+7.3724 	EXP 	window1: recordFrameIntervals = False
+7.9818 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='press sace', units='height', win=Window(...), wrapWidth=1)
+7.9934 	EXP 	Created question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='question', opacity=1, ori=0.0, pos=array([0. , 0.3]), rgb=UNKNOWN, text='Which one is better?', units='height', win=Window(...), wrapWidth=1)
+7.9951 	EXP 	Created button_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='button_1', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.9964 	EXP 	Created button_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='button_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.9976 	EXP 	Created text_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_end', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.1191 	EXP 	text: autoDraw = True
+8.6012 	EXP 	Imported conditions.xlsx as conditions, 30 conditions, 3 params
+8.6016 	EXP 	Created sequence: random, trialTypes=30, nReps=1, seed=None
+8.6019 	EXP 	New trial (rep=0, index=0): {'backs': 2, 'color': '红色', 'colorName': 'red'}
+8.6389 	EXP 	text: autoDraw = False
+8.6389 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+8.6389 	EXP 	button_1: text = '1￥来完成\n一个黑色任务'
+8.6389 	EXP 	button_2: pos = array([-0.4 , -0.12])
+8.6389 	EXP 	button_2: text = '2￥来完成\n一个红色任务'
+8.6389 	EXP 	question: autoDraw = True
+8.6389 	EXP 	button_1: autoDraw = True
+8.6389 	EXP 	button_2: autoDraw = True
+8.6471 	DATA 	Keypress: space
+10.0780 	EXP 	New trial (rep=0, index=1): {'backs': 6, 'color': '棕色', 'colorName': 'brown'}
+10.1055 	EXP 	question: autoDraw = False
+10.1055 	EXP 	button_1: autoDraw = False
+10.1055 	EXP 	button_2: autoDraw = False
+10.1055 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+10.1055 	EXP 	button_1: text = '1￥来完成\n一个黑色任务'
+10.1055 	EXP 	button_2: pos = array([-0.4 , -0.12])
+10.1055 	EXP 	button_2: text = '2￥来完成\n一个棕色任务'
+10.1055 	EXP 	question: autoDraw = True
+10.1055 	EXP 	button_1: autoDraw = True
+10.1055 	EXP 	button_2: autoDraw = True
+10.5104 	EXP 	New trial (rep=0, index=2): {'backs': 5, 'color': '绿色', 'colorName': 'green'}
+10.5389 	EXP 	question: autoDraw = False
+10.5389 	EXP 	button_1: autoDraw = False
+10.5389 	EXP 	button_2: autoDraw = False
+10.5389 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+10.5389 	EXP 	button_1: text = '1￥来完成\n一个黑色任务'
+10.5389 	EXP 	button_2: pos = array([-0.4 , -0.12])
+10.5389 	EXP 	button_2: text = '2￥来完成\n一个绿色任务'
+10.5389 	EXP 	question: autoDraw = True
+10.5389 	EXP 	button_1: autoDraw = True
+10.5389 	EXP 	button_2: autoDraw = True
+10.8438 	EXP 	New trial (rep=0, index=3): {'backs': 2, 'color': '红色', 'colorName': 'red'}
+10.8722 	EXP 	question: autoDraw = False
+10.8722 	EXP 	button_1: autoDraw = False
+10.8722 	EXP 	button_2: autoDraw = False
+10.8722 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+10.8722 	EXP 	button_1: text = '0.5￥来完成\n一个黑色任务'
+10.8722 	EXP 	button_2: pos = array([-0.4 , -0.12])
+10.8722 	EXP 	button_2: text = '2￥来完成\n一个红色任务'
+10.8722 	EXP 	question: autoDraw = True
+10.8722 	EXP 	button_1: autoDraw = True
+10.8722 	EXP 	button_2: autoDraw = True
+11.1096 	EXP 	New trial (rep=0, index=4): {'backs': 5, 'color': '绿色', 'colorName': 'green'}
+11.1222 	EXP 	question: autoDraw = False
+11.1222 	EXP 	button_1: autoDraw = False
+11.1222 	EXP 	button_2: autoDraw = False
+11.1222 	EXP 	button_1: pos = array([-0.4 , -0.12])
+11.1222 	EXP 	button_1: text = '0.5￥来完成\n一个黑色任务'
+11.1222 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+11.1222 	EXP 	button_2: text = '2￥来完成\n一个绿色任务'
+11.1222 	EXP 	question: autoDraw = True
+11.1222 	EXP 	button_1: autoDraw = True
+11.1222 	EXP 	button_2: autoDraw = True
+11.3270 	EXP 	New trial (rep=0, index=5): {'backs': 5, 'color': '绿色', 'colorName': 'green'}
+11.3388 	EXP 	question: autoDraw = False
+11.3388 	EXP 	button_1: autoDraw = False
+11.3388 	EXP 	button_2: autoDraw = False
+11.3388 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+11.3388 	EXP 	button_1: text = '0.75￥来完成\n一个黑色任务'
+11.3388 	EXP 	button_2: pos = array([-0.4 , -0.12])
+11.3388 	EXP 	button_2: text = '2￥来完成\n一个绿色任务'
+11.3388 	EXP 	question: autoDraw = True
+11.3388 	EXP 	button_1: autoDraw = True
+11.3388 	EXP 	button_2: autoDraw = True
+11.7097 	EXP 	New trial (rep=0, index=6): {'backs': 6, 'color': '棕色', 'colorName': 'brown'}
+11.7223 	EXP 	question: autoDraw = False
+11.7223 	EXP 	button_1: autoDraw = False
+11.7223 	EXP 	button_2: autoDraw = False
+11.7223 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+11.7223 	EXP 	button_1: text = '1.5￥来完成\n一个黑色任务'
+11.7223 	EXP 	button_2: pos = array([-0.4 , -0.12])
+11.7223 	EXP 	button_2: text = '2￥来完成\n一个棕色任务'
+11.7223 	EXP 	question: autoDraw = True
+11.7223 	EXP 	button_1: autoDraw = True
+11.7223 	EXP 	button_2: autoDraw = True
+11.9770 	EXP 	New trial (rep=0, index=7): {'backs': 6, 'color': '棕色', 'colorName': 'brown'}
+11.9888 	EXP 	question: autoDraw = False
+11.9888 	EXP 	button_1: autoDraw = False
+11.9888 	EXP 	button_2: autoDraw = False
+11.9888 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+11.9888 	EXP 	button_1: text = '1.75￥来完成\n一个黑色任务'
+11.9888 	EXP 	button_2: pos = array([-0.4 , -0.12])
+11.9888 	EXP 	button_2: text = '2￥来完成\n一个棕色任务'
+11.9888 	EXP 	question: autoDraw = True
+11.9888 	EXP 	button_1: autoDraw = True
+11.9888 	EXP 	button_2: autoDraw = True
+12.2432 	EXP 	New trial (rep=0, index=8): {'backs': 6, 'color': '棕色', 'colorName': 'brown'}
+12.2556 	EXP 	question: autoDraw = False
+12.2556 	EXP 	button_1: autoDraw = False
+12.2556 	EXP 	button_2: autoDraw = False
+12.2556 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+12.2556 	EXP 	button_1: text = '1.62￥来完成\n一个黑色任务'
+12.2556 	EXP 	button_2: pos = array([-0.4 , -0.12])
+12.2556 	EXP 	button_2: text = '2￥来完成\n一个棕色任务'
+12.2556 	EXP 	question: autoDraw = True
+12.2556 	EXP 	button_1: autoDraw = True
+12.2556 	EXP 	button_2: autoDraw = True
+12.4936 	EXP 	New trial (rep=0, index=9): {'backs': 4, 'color': '紫色', 'colorName': 'purple'}
+12.5222 	EXP 	question: autoDraw = False
+12.5222 	EXP 	button_1: autoDraw = False
+12.5222 	EXP 	button_2: autoDraw = False
+12.5222 	EXP 	button_1: pos = array([-0.4 , -0.12])
+12.5222 	EXP 	button_1: text = '1￥来完成\n一个黑色任务'
+12.5222 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+12.5222 	EXP 	button_2: text = '2￥来完成\n一个紫色任务'
+12.5222 	EXP 	question: autoDraw = True
+12.5222 	EXP 	button_1: autoDraw = True
+12.5222 	EXP 	button_2: autoDraw = True
+12.8267 	EXP 	New trial (rep=0, index=10): {'backs': 2, 'color': '红色', 'colorName': 'red'}
+12.8388 	EXP 	question: autoDraw = False
+12.8388 	EXP 	button_1: autoDraw = False
+12.8388 	EXP 	button_2: autoDraw = False
+12.8388 	EXP 	button_1: pos = array([-0.4 , -0.12])
+12.8388 	EXP 	button_1: text = '0.25￥来完成\n一个黑色任务'
+12.8388 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+12.8388 	EXP 	button_2: text = '2￥来完成\n一个红色任务'
+12.8388 	EXP 	question: autoDraw = True
+12.8388 	EXP 	button_1: autoDraw = True
+12.8388 	EXP 	button_2: autoDraw = True
+13.0772 	EXP 	New trial (rep=0, index=11): {'backs': 6, 'color': '棕色', 'colorName': 'brown'}
+13.1055 	EXP 	question: autoDraw = False
+13.1055 	EXP 	button_1: autoDraw = False
+13.1055 	EXP 	button_2: autoDraw = False
+13.1055 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+13.1055 	EXP 	button_1: text = '1.56￥来完成\n一个黑色任务'
+13.1055 	EXP 	button_2: pos = array([-0.4 , -0.12])
+13.1055 	EXP 	button_2: text = '2￥来完成\n一个棕色任务'
+13.1055 	EXP 	question: autoDraw = True
+13.1055 	EXP 	button_1: autoDraw = True
+13.1055 	EXP 	button_2: autoDraw = True
+13.2766 	EXP 	New trial (rep=0, index=12): {'backs': 4, 'color': '蓝色', 'colorName': 'blue'}
+13.2888 	EXP 	question: autoDraw = False
+13.2888 	EXP 	button_1: autoDraw = False
+13.2888 	EXP 	button_2: autoDraw = False
+13.2888 	EXP 	button_1: pos = array([-0.4 , -0.12])
+13.2888 	EXP 	button_1: text = '1￥来完成\n一个黑色任务'
+13.2888 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+13.2888 	EXP 	button_2: text = '2￥来完成\n一个蓝色任务'
+13.2888 	EXP 	question: autoDraw = True
+13.2888 	EXP 	button_1: autoDraw = True
+13.2888 	EXP 	button_2: autoDraw = True
+13.5937 	EXP 	New trial (rep=0, index=13): {'backs': 4, 'color': '紫色', 'colorName': 'purple'}
+13.6222 	EXP 	question: autoDraw = False
+13.6222 	EXP 	button_1: autoDraw = False
+13.6222 	EXP 	button_2: autoDraw = False
+13.6222 	EXP 	button_1: pos = array([-0.4 , -0.12])
+13.6222 	EXP 	button_1: text = '0.5￥来完成\n一个黑色任务'
+13.6222 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+13.6222 	EXP 	button_2: text = '2￥来完成\n一个紫色任务'
+13.6222 	EXP 	question: autoDraw = True
+13.6222 	EXP 	button_1: autoDraw = True
+13.6222 	EXP 	button_2: autoDraw = True
+13.9429 	EXP 	New trial (rep=0, index=14): {'backs': 4, 'color': '紫色', 'colorName': 'purple'}
+13.9555 	EXP 	question: autoDraw = False
+13.9555 	EXP 	button_1: autoDraw = False
+13.9555 	EXP 	button_2: autoDraw = False
+13.9555 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+13.9555 	EXP 	button_1: text = '0.25￥来完成\n一个黑色任务'
+13.9555 	EXP 	button_2: pos = array([-0.4 , -0.12])
+13.9555 	EXP 	button_2: text = '2￥来完成\n一个紫色任务'
+13.9555 	EXP 	question: autoDraw = True
+13.9555 	EXP 	button_1: autoDraw = True
+13.9555 	EXP 	button_2: autoDraw = True
+14.2104 	EXP 	New trial (rep=0, index=15): {'backs': 2, 'color': '红色', 'colorName': 'red'}
+14.2221 	EXP 	question: autoDraw = False
+14.2221 	EXP 	button_1: autoDraw = False
+14.2221 	EXP 	button_2: autoDraw = False
+14.2221 	EXP 	button_1: pos = array([-0.4 , -0.12])
+14.2221 	EXP 	button_1: text = '0.12￥来完成\n一个黑色任务'
+14.2221 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+14.2221 	EXP 	button_2: text = '2￥来完成\n一个红色任务'
+14.2221 	EXP 	question: autoDraw = True
+14.2221 	EXP 	button_1: autoDraw = True
+14.2221 	EXP 	button_2: autoDraw = True
+14.4101 	EXP 	New trial (rep=0, index=16): {'backs': 4, 'color': '紫色', 'colorName': 'purple'}
+14.4390 	EXP 	question: autoDraw = False
+14.4390 	EXP 	button_1: autoDraw = False
+14.4390 	EXP 	button_2: autoDraw = False
+14.4390 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+14.4390 	EXP 	button_1: text = '0.38￥来完成\n一个黑色任务'
+14.4390 	EXP 	button_2: pos = array([-0.4 , -0.12])
+14.4390 	EXP 	button_2: text = '2￥来完成\n一个紫色任务'
+14.4390 	EXP 	question: autoDraw = True
+14.4390 	EXP 	button_1: autoDraw = True
+14.4390 	EXP 	button_2: autoDraw = True
+14.7103 	EXP 	New trial (rep=0, index=17): {'backs': 4, 'color': '紫色', 'colorName': 'purple'}
+14.7222 	EXP 	question: autoDraw = False
+14.7222 	EXP 	button_1: autoDraw = False
+14.7222 	EXP 	button_2: autoDraw = False
+14.7222 	EXP 	button_1: pos = array([-0.4 , -0.12])
+14.7222 	EXP 	button_1: text = '0.31￥来完成\n一个黑色任务'
+14.7222 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+14.7222 	EXP 	button_2: text = '2￥来完成\n一个紫色任务'
+14.7222 	EXP 	question: autoDraw = True
+14.7222 	EXP 	button_1: autoDraw = True
+14.7222 	EXP 	button_2: autoDraw = True
+15.0597 	EXP 	New trial (rep=0, index=18): {'backs': 2, 'color': '红色', 'colorName': 'red'}
+15.0722 	EXP 	question: autoDraw = False
+15.0722 	EXP 	button_1: autoDraw = False
+15.0722 	EXP 	button_2: autoDraw = False
+15.0722 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+15.0722 	EXP 	button_1: text = '0.06￥来完成\n一个黑色任务'
+15.0722 	EXP 	button_2: pos = array([-0.4 , -0.12])
+15.0722 	EXP 	button_2: text = '2￥来完成\n一个红色任务'
+15.0722 	EXP 	question: autoDraw = True
+15.0722 	EXP 	button_1: autoDraw = True
+15.0722 	EXP 	button_2: autoDraw = True
+15.3768 	EXP 	New trial (rep=0, index=19): {'backs': 2, 'color': '红色', 'colorName': 'red'}
+15.3888 	EXP 	question: autoDraw = False
+15.3888 	EXP 	button_1: autoDraw = False
+15.3888 	EXP 	button_2: autoDraw = False
+15.3888 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+15.3888 	EXP 	button_1: text = '0.03￥来完成\n一个黑色任务'
+15.3888 	EXP 	button_2: pos = array([-0.4 , -0.12])
+15.3888 	EXP 	button_2: text = '2￥来完成\n一个红色任务'
+15.3888 	EXP 	question: autoDraw = True
+15.3888 	EXP 	button_1: autoDraw = True
+15.3888 	EXP 	button_2: autoDraw = True
+15.6943 	EXP 	New trial (rep=0, index=20): {'backs': 3, 'color': '蓝色', 'colorName': 'blue'}
+15.7222 	EXP 	question: autoDraw = False
+15.7222 	EXP 	button_1: autoDraw = False
+15.7222 	EXP 	button_2: autoDraw = False
+15.7222 	EXP 	button_1: pos = array([-0.4 , -0.12])
+15.7222 	EXP 	button_1: text = '1.5￥来完成\n一个黑色任务'
+15.7222 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+15.7222 	EXP 	button_2: text = '2￥来完成\n一个蓝色任务'
+15.7222 	EXP 	question: autoDraw = True
+15.7222 	EXP 	button_1: autoDraw = True
+15.7222 	EXP 	button_2: autoDraw = True
+15.9597 	EXP 	New trial (rep=0, index=21): {'backs': 3, 'color': '蓝色', 'colorName': 'blue'}
+15.9723 	EXP 	question: autoDraw = False
+15.9723 	EXP 	button_1: autoDraw = False
+15.9723 	EXP 	button_2: autoDraw = False
+15.9723 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+15.9723 	EXP 	button_1: text = '1.25￥来完成\n一个黑色任务'
+15.9723 	EXP 	button_2: pos = array([-0.4 , -0.12])
+15.9723 	EXP 	button_2: text = '2￥来完成\n一个蓝色任务'
+15.9723 	EXP 	question: autoDraw = True
+15.9723 	EXP 	button_1: autoDraw = True
+15.9723 	EXP 	button_2: autoDraw = True
+16.2605 	EXP 	New trial (rep=0, index=22): {'backs': 5, 'color': '绿色', 'colorName': 'green'}
+16.2721 	EXP 	question: autoDraw = False
+16.2721 	EXP 	button_1: autoDraw = False
+16.2721 	EXP 	button_2: autoDraw = False
+16.2721 	EXP 	button_1: pos = array([-0.4 , -0.12])
+16.2721 	EXP 	button_1: text = '0.88￥来完成\n一个黑色任务'
+16.2721 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+16.2721 	EXP 	button_2: text = '2￥来完成\n一个绿色任务'
+16.2721 	EXP 	question: autoDraw = True
+16.2721 	EXP 	button_1: autoDraw = True
+16.2721 	EXP 	button_2: autoDraw = True
+16.4763 	EXP 	New trial (rep=0, index=23): {'backs': 5, 'color': '绿色', 'colorName': 'green'}
+16.4888 	EXP 	question: autoDraw = False
+16.4888 	EXP 	button_1: autoDraw = False
+16.4888 	EXP 	button_2: autoDraw = False
+16.4888 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+16.4888 	EXP 	button_1: text = '0.94￥来完成\n一个黑色任务'
+16.4888 	EXP 	button_2: pos = array([-0.4 , -0.12])
+16.4888 	EXP 	button_2: text = '2￥来完成\n一个绿色任务'
+16.4888 	EXP 	question: autoDraw = True
+16.4888 	EXP 	button_1: autoDraw = True
+16.4888 	EXP 	button_2: autoDraw = True
+16.8108 	EXP 	New trial (rep=0, index=24): {'backs': 3, 'color': '蓝色', 'colorName': 'blue'}
+16.8388 	EXP 	question: autoDraw = False
+16.8388 	EXP 	button_1: autoDraw = False
+16.8388 	EXP 	button_2: autoDraw = False
+16.8388 	EXP 	button_1: pos = array([ 0.4 , -0.12])
+16.8388 	EXP 	button_1: text = '1.12￥来完成\n一个黑色任务'
+16.8388 	EXP 	button_2: pos = array([-0.4 , -0.12])
+16.8388 	EXP 	button_2: text = '2￥来完成\n一个蓝色任务'
+16.8388 	EXP 	question: autoDraw = True
+16.8388 	EXP 	button_1: autoDraw = True
+16.8388 	EXP 	button_2: autoDraw = True
+17.0597 	EXP 	New trial (rep=0, index=25): {'backs': 3, 'color': '蓝色', 'colorName': 'blue'}
+17.0721 	EXP 	question: autoDraw = False
+17.0721 	EXP 	button_1: autoDraw = False
+17.0721 	EXP 	button_2: autoDraw = False
+17.0721 	EXP 	button_1: pos = array([-0.4 , -0.12])
+17.0721 	EXP 	button_1: text = '1.19￥来完成\n一个黑色任务'
+17.0721 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+17.0721 	EXP 	button_2: text = '2￥来完成\n一个蓝色任务'
+17.0721 	EXP 	question: autoDraw = True
+17.0721 	EXP 	button_1: autoDraw = True
+17.0721 	EXP 	button_2: autoDraw = True
+17.3270 	EXP 	New trial (rep=0, index=26): {'backs': 3, 'color': '蓝色', 'colorName': 'blue'}
+17.3388 	EXP 	question: autoDraw = False
+17.3388 	EXP 	button_1: autoDraw = False
+17.3388 	EXP 	button_2: autoDraw = False
+17.3388 	EXP 	button_1: pos = array([-0.4 , -0.12])
+17.3388 	EXP 	button_1: text = '1.22￥来完成\n一个黑色任务'
+17.3388 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+17.3388 	EXP 	button_2: text = '2￥来完成\n一个蓝色任务'
+17.3388 	EXP 	question: autoDraw = True
+17.3388 	EXP 	button_1: autoDraw = True
+17.3388 	EXP 	button_2: autoDraw = True
+17.6936 	EXP 	New trial (rep=0, index=27): {'backs': 5, 'color': '绿色', 'colorName': 'green'}
+17.7222 	EXP 	question: autoDraw = False
+17.7222 	EXP 	button_1: autoDraw = False
+17.7222 	EXP 	button_2: autoDraw = False
+17.7222 	EXP 	button_1: pos = array([-0.4 , -0.12])
+17.7222 	EXP 	button_1: text = '0.97￥来完成\n一个黑色任务'
+17.7222 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+17.7222 	EXP 	button_2: text = '2￥来完成\n一个绿色任务'
+17.7222 	EXP 	question: autoDraw = True
+17.7222 	EXP 	button_1: autoDraw = True
+17.7222 	EXP 	button_2: autoDraw = True
+17.9595 	EXP 	New trial (rep=0, index=28): {'backs': 4, 'color': '紫色', 'colorName': 'purple'}
+17.9722 	EXP 	question: autoDraw = False
+17.9722 	EXP 	button_1: autoDraw = False
+17.9722 	EXP 	button_2: autoDraw = False
+17.9722 	EXP 	button_1: pos = array([-0.4 , -0.12])
+17.9722 	EXP 	button_1: text = '0.28￥来完成\n一个黑色任务'
+17.9722 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+17.9722 	EXP 	button_2: text = '2￥来完成\n一个紫色任务'
+17.9722 	EXP 	question: autoDraw = True
+17.9722 	EXP 	button_1: autoDraw = True
+17.9722 	EXP 	button_2: autoDraw = True
+18.2276 	EXP 	New trial (rep=0, index=29): {'backs': 6, 'color': '棕色', 'colorName': 'brown'}
+18.2555 	EXP 	question: autoDraw = False
+18.2555 	EXP 	button_1: autoDraw = False
+18.2555 	EXP 	button_2: autoDraw = False
+18.2555 	EXP 	button_1: pos = array([-0.4 , -0.12])
+18.2555 	EXP 	button_1: text = '1.59￥来完成\n一个黑色任务'
+18.2555 	EXP 	button_2: pos = array([ 0.4 , -0.12])
+18.2555 	EXP 	button_2: text = '2￥来完成\n一个棕色任务'
+18.2555 	EXP 	question: autoDraw = True
+18.2555 	EXP 	button_1: autoDraw = True
+18.2555 	EXP 	button_2: autoDraw = True
+18.5889 	EXP 	question: autoDraw = False
+18.5889 	EXP 	button_1: autoDraw = False
+18.5889 	EXP 	button_2: autoDraw = False
+18.5889 	EXP 	text_end: text = '随机抽选的结果为：\n获得0.94￥的黑色任务'
+18.5889 	EXP 	text_end: autoDraw = True
+23.1722 	EXP 	text_end: autoDraw = False
+23.3511 	EXP 	window1: mouseVisible = True

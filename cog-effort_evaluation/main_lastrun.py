@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on February 03, 2024, at 15:50
+    on February 17, 2024, at 12:17
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Ryougi mana\\Desktop\\5 心理学工具箱\\psychpyProgram\\cog-effort_evaluation\\main_lastrun.py',
+    originPath='C:\\Users\\Ryougi mana\\Desktop\\5 心理学工具箱\\psychpyProgram\\cog_effort_discount_paradigm\\cog-effort_evaluation\\main_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -123,6 +123,9 @@ round_green = 0
 buttonText1 = 0
 buttonText2 = 0
 positions = [(-0.4, -0.12), (0.4, -0.12)]
+
+# 初始化选项记录
+Choices = list()
 question = visual.TextStim(win=win, name='question',
     text='Which one is better?',
     font='Open Sans',
@@ -145,6 +148,17 @@ button_2 = visual.TextStim(win=win, name='button_2',
     languageStyle='LTR',
     depth=-3.0);
 resp_CEP = keyboard.Keyboard()
+
+# Initialize components for Routine "end"
+endClock = core.Clock()
+text_end = visual.TextStim(win=win, name='text_end',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+resp_end = keyboard.Keyboard()
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -398,21 +412,29 @@ for thisTrial in trials:
         else:
             preference = 2
     
+    
+    
+    
+    
     #设置下一轮使用的LowEffort值
     if preference == 1:
         exec("value4low_" + colorName + "=" + str(thisValue + thisUnit/2))
+        thisChoice = list(["黑色", thisValue])
     else:
         exec("value4low_" + colorName + "=" + str(thisValue - thisUnit/2))
+        thisChoice = list([color, 2])
     
     resultvalue = eval("value4low_" + colorName)
     exec("round_" + colorName + "=" + str("round_" + colorName + " + 1"))
     rounds = eval("round_" + colorName)
+    Choices.append(thisChoice)
     
     # 记录信息
     thisExp.addData("preference", preference)
     thisExp.addData("thisvalue", thisValue)
     thisExp.addData("round", rounds)
     thisExp.addData("result", resultvalue)
+    thisExp.addData("choice", thisChoice)
     
     trials.addData('question.started', question.tStartRefresh)
     trials.addData('question.stopped', question.tStopRefresh)
@@ -434,6 +456,98 @@ for thisTrial in trials:
     
 # completed 1.0 repeats of 'trials'
 
+
+# ------Prepare to start Routine "end"-------
+continueRoutine = True
+# update component parameters for each repeat
+f_choice = random.sample(Choices,1)
+
+endInstr = "随机抽选的结果为：\n" + "获得" + str(round(f_choice[0][1],2)) + "￥的" + str(f_choice[0][0]) + "任务"
+
+text_end.setText(endInstr)
+resp_end.keys = []
+resp_end.rt = []
+_resp_end_allKeys = []
+# keep track of which components have finished
+endComponents = [text_end, resp_end]
+for thisComponent in endComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+endClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "end"-------
+while continueRoutine:
+    # get current time
+    t = endClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=endClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_end* updates
+    if text_end.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_end.frameNStart = frameN  # exact frame index
+        text_end.tStart = t  # local t and not account for scr refresh
+        text_end.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_end, 'tStartRefresh')  # time at next scr refresh
+        text_end.setAutoDraw(True)
+    
+    # *resp_end* updates
+    waitOnFlip = False
+    if resp_end.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        resp_end.frameNStart = frameN  # exact frame index
+        resp_end.tStart = t  # local t and not account for scr refresh
+        resp_end.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(resp_end, 'tStartRefresh')  # time at next scr refresh
+        resp_end.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(resp_end.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(resp_end.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if resp_end.status == STARTED and not waitOnFlip:
+        theseKeys = resp_end.getKeys(keyList=['space'], waitRelease=False)
+        _resp_end_allKeys.extend(theseKeys)
+        if len(_resp_end_allKeys):
+            resp_end.keys = _resp_end_allKeys[-1].name  # just the last key pressed
+            resp_end.rt = _resp_end_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in endComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "end"-------
+for thisComponent in endComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_end.started', text_end.tStartRefresh)
+thisExp.addData('text_end.stopped', text_end.tStopRefresh)
+# the Routine "end" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting
