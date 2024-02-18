@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on February 12, 2024, at 12:50
+    on February 18, 2024, at 12:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -85,21 +85,22 @@ defaultKeyboard = keyboard.Keyboard()
 
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
-guide = visual.TextStim(win=win, name='guide',
-    text='2-back\nture : m\nfalse: n',
-    font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
+instruction = visual.ImageStim(
+    win=win,
+    name='instruction', units='pix', 
+    image='pics/1.png', mask=None,
+    ori=0.0, pos=(0, 0), size=(1920, 1080),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=0.0)
 resp_guide = keyboard.Keyboard()
 
 # Initialize components for Routine "newBlock"
 newBlockClock = core.Clock()
 block_instr = visual.TextStim(win=win, name='block_instr',
-    text='block instrution',
+    text='',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    units='height', pos=(-0.08, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
@@ -161,7 +162,7 @@ resp_guide.keys = []
 resp_guide.rt = []
 _resp_guide_allKeys = []
 # keep track of which components have finished
-instrComponents = [guide, resp_guide]
+instrComponents = [instruction, resp_guide]
 for thisComponent in instrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -184,14 +185,14 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *guide* updates
-    if guide.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *instruction* updates
+    if instruction.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        guide.frameNStart = frameN  # exact frame index
-        guide.tStart = t  # local t and not account for scr refresh
-        guide.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(guide, 'tStartRefresh')  # time at next scr refresh
-        guide.setAutoDraw(True)
+        instruction.frameNStart = frameN  # exact frame index
+        instruction.tStart = t  # local t and not account for scr refresh
+        instruction.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(instruction, 'tStartRefresh')  # time at next scr refresh
+        instruction.setAutoDraw(True)
     
     # *resp_guide* updates
     waitOnFlip = False
@@ -236,15 +237,15 @@ while continueRoutine:
 for thisComponent in instrComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('guide.started', guide.tStartRefresh)
-thisExp.addData('guide.stopped', guide.tStopRefresh)
+thisExp.addData('instruction.started', instruction.tStartRefresh)
+thisExp.addData('instruction.stopped', instruction.tStopRefresh)
 # the Routine "instr" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-blocks = data.TrialHandler(nReps=1.0, method='random', 
+blocks = data.TrialHandler(nReps=3.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('con_block.xlsx', selection='5'),
+    trialList=data.importConditions('con_block.xlsx'),
     seed=None, name='blocks')
 thisExp.addLoop(blocks)  # add the loop to the experiment
 thisBlock = blocks.trialList[0]  # so we can initialise stimuli with some values
@@ -274,7 +275,20 @@ for thisBlock in blocks:
     NumTar = 0
     NumNonTar = 0
     
+    instrBlock = \
+    "你即将完成" + color_instr + "任务。"\
+    "该任务为" + str(n) + "-back任务。\n" +\
+    "你需要将屏幕上出现的字母与前"+ str(n) +\
+    "个字母进行比\n较，如果相同，则按N键，如果不同" +\
+    "则按M键。\n\n例如，第1个字母是P，第" + str(n+1) +\
+    "个字母也是P，则为\n相同，否则为不同。无法进行" +\
+    "比较的默认为不同。\n\n" +\
+    "如果理解了实验任务，请按空格进入实验。"
     
+    
+    
+    
+    block_instr.setText(instrBlock)
     resp_block.keys = []
     resp_block.rt = []
     _resp_block_allKeys = []
@@ -362,7 +376,7 @@ for thisBlock in blocks:
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('con_back.xlsx'),
+        trialList=data.importConditions('con_back.xlsx', selection='1:15'),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -558,7 +572,14 @@ for thisBlock in blocks:
     rate_T = NumTarget / NumTar
     rate_NT = NumNonTarget / NumNonTar
     
-    feedback = "你完成靶子任务的正确率为：" + str(round(rate_T*100,2)) + "%\n你完成非靶子任务的正确率为：" + str(round(rate_NT*100,2)) + "%"
+    if rate_T >= 0.5 and rate_NT >= 0.5:
+        feedback0 = "做的好！"
+    else:
+        feedback0 = "再加加油！"
+    
+    feedback = "你完成靶子任务的正确率为：" + str(round(rate_T*100,2)) + \
+    "%\n你完成非靶子任务的正确率为：" + str(round(rate_NT*100,2)) + "%\n\n" +\
+    feedback0
     
     
     FB.setText(feedback)
@@ -647,7 +668,7 @@ for thisBlock in blocks:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1.0 repeats of 'blocks'
+# completed 3.0 repeats of 'blocks'
 
 
 # ------Prepare to start Routine "Endexp"-------
