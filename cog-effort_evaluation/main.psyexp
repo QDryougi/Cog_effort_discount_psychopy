@@ -67,8 +67,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        thisPosition = position1;&amp;#10;thisColor = colorName;&amp;#10;thisUnit = eval((&quot;unit_&quot; + colorName));&amp;#10;exec((((&quot;unit_&quot; + colorName) + &quot; = &quot;) + (thisUnit / 2).toString()));&amp;#10;thisValue = eval((&quot;value4low_&quot; + colorName));&amp;#10;if ((thisPosition[0] &lt; 0)) {&amp;#10;    if ((resp_CEP.keys === &quot;n&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((resp_CEP.keys === &quot;m&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;}&amp;#10;if ((preference === 1)) {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue + (thisUnit / 2)).toString()));&amp;#10;    thisChoice = list([&quot;\u9ed1\u8272&quot;, thisValue]);&amp;#10;} else {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue - (thisUnit / 2)).toString()));&amp;#10;    thisChoice = list([color, 2]);&amp;#10;}&amp;#10;resultvalue = eval((&quot;value4low_&quot; + colorName));&amp;#10;exec((((&quot;round_&quot; + colorName) + &quot;=&quot;) + ((&quot;round_&quot; + colorName) + &quot; + 1&quot;).toString()));&amp;#10;rounds = eval((&quot;round_&quot; + colorName));&amp;#10;Choices.push(thisChoice);&amp;#10;psychoJS.experiment.addData(&quot;preference&quot;, preference);&amp;#10;psychoJS.experiment.addData(&quot;thisvalue&quot;, thisValue);&amp;#10;psychoJS.experiment.addData(&quot;round&quot;, rounds);&amp;#10;psychoJS.experiment.addData(&quot;result&quot;, resultvalue);&amp;#10;psychoJS.experiment.addData(&quot;choice&quot;, thisChoice);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# 记录下button1的位置&amp;#10;thisPosition = position1&amp;#10;&amp;#10;#记录下当前的颜色&amp;#10;thisColor = colorName&amp;#10;&amp;#10;# 记录当前试次使用的单位&amp;#10;thisUnit = eval(&quot;unit_&quot; + colorName)&amp;#10;&amp;#10;# 设置该颜色下一轮使用的单位&amp;#10;exec(&quot;unit_&quot; + colorName + &quot; = &quot; + str(thisUnit/2))&amp;#10;&amp;#10;# 记录当前轮次value&amp;#10;thisValue = eval(&quot;value4low_&quot; + colorName)&amp;#10;&amp;#10;# 记录下此时被试选择了 high effort(2) or low effort(1)&amp;#10;if thisPosition[0] &lt; 0:&amp;#10;    if resp_CEP.keys == &quot;n&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;else:&amp;#10;    if resp_CEP.keys == &quot;m&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;#设置下一轮使用的LowEffort值&amp;#10;if preference == 1:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue + thisUnit/2))&amp;#10;    thisChoice = list([&quot;黑色&quot;, thisValue])&amp;#10;else:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue - thisUnit/2))&amp;#10;    thisChoice = list([color, 2])&amp;#10;&amp;#10;resultvalue = eval(&quot;value4low_&quot; + colorName)&amp;#10;exec(&quot;round_&quot; + colorName + &quot;=&quot; + str(&quot;round_&quot; + colorName + &quot; + 1&quot;))&amp;#10;rounds = eval(&quot;round_&quot; + colorName)&amp;#10;Choices.append(thisChoice)&amp;#10;&amp;#10;# 记录信息&amp;#10;thisExp.addData(&quot;preference&quot;, preference)&amp;#10;thisExp.addData(&quot;thisvalue&quot;, thisValue)&amp;#10;thisExp.addData(&quot;round&quot;, rounds)&amp;#10;thisExp.addData(&quot;result&quot;, resultvalue)&amp;#10;thisExp.addData(&quot;choice&quot;, thisChoice)&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        thisPosition = position1;&amp;#10;thisColor = colorName;&amp;#10;thisUnit = eval((&quot;unit_&quot; + colorName));&amp;#10;exec((((&quot;unit_&quot; + colorName) + &quot; = &quot;) + (thisUnit / 2).toString()));&amp;#10;thisValue = eval((&quot;value4low_&quot; + colorName));&amp;#10;if ((thisPosition[0] &lt; 0)) {&amp;#10;    if ((resp_CEP.keys === &quot;n&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((resp_CEP.keys === &quot;m&quot;)) {&amp;#10;        preference = 1;&amp;#10;    } else {&amp;#10;        preference = 2;&amp;#10;    }&amp;#10;}&amp;#10;if ((preference === 1)) {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue + (thisUnit / 2)).toString()));&amp;#10;    thisChoice = list([&quot;\u9ed1\u8272&quot;, thisValue, 1]);&amp;#10;} else {&amp;#10;    exec((((&quot;value4low_&quot; + colorName) + &quot;=&quot;) + (thisValue - (thisUnit / 2)).toString()));&amp;#10;    thisChoice = list([color, 2, backs]);&amp;#10;}&amp;#10;resultvalue = eval((&quot;value4low_&quot; + colorName));&amp;#10;exec((((&quot;round_&quot; + colorName) + &quot;=&quot;) + ((&quot;round_&quot; + colorName) + &quot; + 1&quot;).toString()));&amp;#10;rounds = eval((&quot;round_&quot; + colorName));&amp;#10;Choices.push(thisChoice);&amp;#10;psychoJS.experiment.addData(&quot;preference&quot;, preference);&amp;#10;psychoJS.experiment.addData(&quot;thisvalue&quot;, thisValue);&amp;#10;psychoJS.experiment.addData(&quot;round&quot;, rounds);&amp;#10;psychoJS.experiment.addData(&quot;result&quot;, resultvalue);&amp;#10;psychoJS.experiment.addData(&quot;choice&quot;, thisChoice);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# 记录下button1的位置&amp;#10;thisPosition = position1&amp;#10;&amp;#10;#记录下当前的颜色&amp;#10;thisColor = colorName&amp;#10;&amp;#10;# 记录当前试次使用的单位&amp;#10;thisUnit = eval(&quot;unit_&quot; + colorName)&amp;#10;&amp;#10;# 设置该颜色下一轮使用的单位&amp;#10;exec(&quot;unit_&quot; + colorName + &quot; = &quot; + str(thisUnit/2))&amp;#10;&amp;#10;# 记录当前轮次value&amp;#10;thisValue = eval(&quot;value4low_&quot; + colorName)&amp;#10;&amp;#10;# 记录下此时被试选择了 high effort(2) or low effort(1)&amp;#10;if thisPosition[0] &lt; 0:&amp;#10;    if resp_CEP.keys == &quot;n&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;else:&amp;#10;    if resp_CEP.keys == &quot;m&quot;:&amp;#10;        preference = 1&amp;#10;    else:&amp;#10;        preference = 2&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;#设置下一轮使用的LowEffort值&amp;#10;if preference == 1:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue + thisUnit/2))&amp;#10;    thisChoice = list([&quot;黑色&quot;, thisValue, 1])&amp;#10;else:&amp;#10;    exec(&quot;value4low_&quot; + colorName + &quot;=&quot; + str(thisValue - thisUnit/2))&amp;#10;    thisChoice = list([color, 2, backs])&amp;#10;&amp;#10;resultvalue = eval(&quot;value4low_&quot; + colorName)&amp;#10;exec(&quot;round_&quot; + colorName + &quot;=&quot; + str(&quot;round_&quot; + colorName + &quot; + 1&quot;))&amp;#10;rounds = eval(&quot;round_&quot; + colorName)&amp;#10;Choices.append(thisChoice)&amp;#10;&amp;#10;# 记录信息&amp;#10;thisExp.addData(&quot;preference&quot;, preference)&amp;#10;thisExp.addData(&quot;thisvalue&quot;, thisValue)&amp;#10;thisExp.addData(&quot;round&quot;, rounds)&amp;#10;thisExp.addData(&quot;result&quot;, resultvalue)&amp;#10;thisExp.addData(&quot;choice&quot;, thisChoice)&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code" valType="code"/>
       </CodeComponent>
@@ -114,7 +114,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0.5" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
@@ -139,7 +139,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0.5" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
@@ -158,7 +158,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0.5" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -211,14 +211,14 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="end">
-      <CodeComponent name="code_2">
+    <Routine name="Nback">
+      <CodeComponent name="code_3">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="f_choice = random.sample(Choices, 1);&amp;#10;endInstr = (((((&quot;\u968f\u673a\u62bd\u9009\u7684\u7ed3\u679c\u4e3a\uff1a\n&quot; + &quot;\u83b7\u5f97&quot;) + Math.round(f_choice[0][1], 2).toString()) + &quot;\uffe5\u7684&quot;) + f_choice[0][0].toString()) + &quot;\u4efb\u52a1&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="f_choice = random.sample(Choices,1)&amp;#10;&amp;#10;endInstr = &quot;随机抽选的结果为：\n&quot; + &quot;获得&quot; + str(round(f_choice[0][1],2)) + &quot;￥的&quot; + str(f_choice[0][0]) + &quot;任务&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;&amp;#10;letters = [chr(i) for i in range(ord('A'), ord('Z')+1)]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var letters;&amp;#10;letters = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(ord(&quot;A&quot;), (ord(&quot;Z&quot;) + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push(chr(i));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="target = eval((&quot;target&quot; + n.toString()));&amp;#10;presentedLetters = ([0] * n);&amp;#10;thisLetter = np.random.choice(letters);&amp;#10;letterSelected = false;&amp;#10;if ((! target)) {&amp;#10;    while ((! letterSelected)) {&amp;#10;        thisLetter = np.random.choice(letters);&amp;#10;        if (((presentedLetters.length &lt; n) || (thisLetter !== presentedLetters.slice((- n))[0]))) {&amp;#10;            letterSelected = true;&amp;#10;        }&amp;#10;    }&amp;#10;} else {&amp;#10;    thisLetter = presentedLetters.slice((- n))[0];&amp;#10;}&amp;#10;presentedLetters.push(thisLetter);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# 初始化target;presentletter&amp;#10;target = eval(&quot;target&quot; + str(n))&amp;#10;presentedLetters = [0]*n&amp;#10;thisLetter = np.random.choice(letters)&amp;#10;letterSelected = False # 设置一个变量来表示字母选取的状态&amp;#10;&amp;#10;# 选择字母&amp;#10;if not target: # 非目标试次情况&amp;#10;        while not letterSelected: # 保持抽选字母循环&amp;#10;            thisLetter = np.random.choice(letters)# 不是目标试次的时候就随机选择一个字母&amp;#10;            if len(presentedLetters) &lt; n or thisLetter != presentedLetters[-n]: # 判断该字母是否符合要求，符合要求则跳出循环&amp;#10;                letterSelected = True # 跳出循环&amp;#10;else: # 目标试次情况&amp;#10;        thisLetter = presentedLetters[-n] # 设置当前字母为前n个字母&amp;#10;presentedLetters.append(thisLetter)" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -227,9 +227,9 @@
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_2" valType="code"/>
+        <Param name="name" updates="None" val="code_3" valType="code"/>
       </CodeComponent>
-      <TextComponent name="text_end">
+      <TextComponent name="fixation">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
@@ -239,7 +239,139 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
-        <Param name="name" updates="None" val="text_end" valType="code"/>
+        <Param name="name" updates="None" val="fixation" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="+" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <TextComponent name="letter">
+        <Param name="color" updates="set every repeat" val="$color_Diff" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="letter" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.5" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$thisLetter" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="resp_Letter">
+        <Param name="allowedKeys" updates="constant" val="'n','m'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="resp_Letter" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.5" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instrNback">
+      <CodeComponent name="code_4">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="color_instr = f_choice[0][0].toString();&amp;#10;instrBlock = ((((((((((((&quot;\u4f60\u5373\u5c06\u5b8c\u6210&quot; + color_instr) + &quot;\u4efb\u52a1\u3002\u8be5\u4efb\u52a1\u4e3a&quot;) + n.toString()) + &quot;-back\u4efb\u52a1\u3002\n&quot;) + &quot;\u4f60\u9700\u8981\u5c06\u5c4f\u5e55\u4e0a\u51fa\u73b0\u7684\u5b57\u6bcd\u4e0e\u524d&quot;) + n.toString()) + &quot;\u4e2a\u5b57\u6bcd\u8fdb\u884c\u6bd4\n\u8f83\uff0c\u5982\u679c\u76f8\u540c\uff0c\u5219\u6309M\u952e\uff0c\u5982\u679c\u4e0d\u540c&quot;) + &quot;\u5219\u6309N\u952e\u3002\n\n\u4f8b\u5982\uff0c\u7b2c1\u4e2a\u5b57\u6bcd\u662fP\uff0c\u7b2c&quot;) + (n + 1).toString()) + &quot;\u4e2a\u5b57\u6bcd\u4e5f\u662fP\uff0c\u5219\u4e3a\n\u76f8\u540c\uff0c\u5426\u5219\u4e3a\u4e0d\u540c\u3002\u65e0\u6cd5\u8fdb\u884c&quot;) + &quot;\u6bd4\u8f83\u7684\u9ed8\u8ba4\u4e3a\u4e0d\u540c\u3002\n\n&quot;) + &quot;\u5982\u679c\u7406\u89e3\u4e86\u5b9e\u9a8c\u4efb\u52a1\uff0c\u8bf7\u6309\u7a7a\u683c\u8fdb\u5165\u5b9e\u9a8c\u3002&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="color_instr = str(f_choice[0][0])&amp;#10;&amp;#10;&amp;#10;&amp;#10;instrBlock = \&amp;#10;&quot;你即将完成&quot; + color_instr + &quot;任务。&quot;\&amp;#10;&quot;该任务为&quot; + str(n) + &quot;-back任务。\n&quot; +\&amp;#10;&quot;你需要将屏幕上出现的字母与前&quot;+ str(n) +\&amp;#10;&quot;个字母进行比\n较，如果相同，则按M键，如果不同&quot; +\&amp;#10;&quot;则按N键。\n\n例如，第1个字母是P，第&quot; + str(n+1) +\&amp;#10;&quot;个字母也是P，则为\n相同，否则为不同。无法进行&quot; +\&amp;#10;&quot;比较的默认为不同。\n\n&quot; +\&amp;#10;&quot;如果理解了实验任务，请按空格进入实验。&quot;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_4" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="block_instr">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="num"/>
+        <Param name="name" updates="None" val="block_instr" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(-0.08, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$instrBlock" valType="str"/>
+        <Param name="units" updates="None" val="height" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="resp_block">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="resp_block" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Endexp">
+      <TextComponent name="text_2">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="text_2" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
@@ -250,18 +382,80 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$endInstr" valType="str"/>
+        <Param name="text" updates="constant" val="感谢参与！" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
-      <KeyboardComponent name="resp_end">
+      <KeyboardComponent name="resp_End">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="resp_end" valType="code"/>
+        <Param name="name" updates="None" val="resp_End" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="mid">
+      <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="f_choice = random.sample(Choices, 1);&amp;#10;midInstr = (((((&quot;\u968f\u673a\u62bd\u9009\u7684\u7ed3\u679c\u4e3a\uff1a\n&quot; + &quot;\u83b7\u5f97&quot;) + Math.round(f_choice[0][1], 2).toString()) + &quot;\uffe5\u7684&quot;) + f_choice[0][0].toString()) + &quot;\u4efb\u52a1&quot;);&amp;#10;n = f_choice[0][2];&amp;#10;select_n = [(n - 1)];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="f_choice = random.sample(Choices,1)&amp;#10;&amp;#10;midInstr = &quot;随机抽选的结果为：\n&quot; + &quot;获得&quot; +\&amp;#10;str(round(f_choice[0][1],2)) + &quot;￥的&quot; +\&amp;#10;str(f_choice[0][0]) + &quot;任务&quot;&amp;#10;&amp;#10;n = f_choice[0][2]&amp;#10;&amp;#10;select_n = [n-1]" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="text_mid">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="text_mid" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$midInstr" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="resp_mid">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="resp_mid" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -289,6 +483,33 @@
     </LoopInitiator>
     <Routine name="trial"/>
     <LoopTerminator name="trials"/>
-    <Routine name="end"/>
+    <Routine name="mid"/>
+    <LoopInitiator loopType="TrialHandler" name="choose">
+      <Param name="Selected rows" updates="None" val="$select_n" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'Lv_Diff': 1, 'color_Diff': 'black', 'color_instr': '黑色'}, {'Lv_Diff': 2, 'color_Diff': 'red', 'color_instr': '红色'}, {'Lv_Diff': 3, 'color_Diff': 'blue', 'color_instr': '蓝色'}, {'Lv_Diff': 4, 'color_Diff': 'purple', 'color_instr': '紫色'}, {'Lv_Diff': 5, 'color_Diff': 'green', 'color_instr': '绿色'}, {'Lv_Diff': 6, 'color_Diff': 'yellow', 'color_instr': '黄色'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="con_block.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="choose" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="instrNback"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_2">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'index1': 0, 'target1': 0, 'corrAns1': 'n', 'index2': 0, 'target2': 0, 'corrAns2': 'n', 'index3': 0, 'target3': 0, 'corrAns3': 'n', 'index4': 0, 'target4': 0, 'corrAns4': 'n', 'index5': 0, 'target5': 0, 'corrAns5': 'n', 'index6': 0, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.39742651603984, 'target1': 0, 'corrAns1': 'n', 'index2': 0, 'target2': 0, 'corrAns2': 'n', 'index3': 0, 'target3': 0, 'corrAns3': 'n', 'index4': 0, 'target4': 0, 'corrAns4': 'n', 'index5': 0, 'target5': 0, 'corrAns5': 'n', 'index6': 0, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.3728403316935073, 'target1': 0, 'corrAns1': 'n', 'index2': 0.3240404890962184, 'target2': 0, 'corrAns2': 'n', 'index3': 0, 'target3': 0, 'corrAns3': 'n', 'index4': 0, 'target4': 0, 'corrAns4': 'n', 'index5': 0, 'target5': 0, 'corrAns5': 'n', 'index6': 0, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.6359976998123091, 'target1': 0, 'corrAns1': 'n', 'index2': 0.3410011501012147, 'target2': 1, 'corrAns2': 'm', 'index3': 0.3713387769692027, 'target3': 0, 'corrAns3': 'n', 'index4': 0, 'target4': 0, 'corrAns4': 'n', 'index5': 0, 'target5': 0, 'corrAns5': 'n', 'index6': 0, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.5515201501226421, 'target1': 0, 'corrAns1': 'n', 'index2': 0.11341285762004005, 'target2': 1, 'corrAns2': 'm', 'index3': 0.5471390198970074, 'target3': 1, 'corrAns3': 'm', 'index4': 0.9556775759752746, 'target4': 0, 'corrAns4': 'n', 'index5': 0, 'target5': 0, 'corrAns5': 'n', 'index6': 0, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.7433294433259207, 'target1': 0, 'corrAns1': 'n', 'index2': 0.5468453203797887, 'target2': 1, 'corrAns2': 'm', 'index3': 0.0071587766734334535, 'target3': 1, 'corrAns3': 'm', 'index4': 0.47652701505990136, 'target4': 0, 'corrAns4': 'n', 'index5': 0.5085738726010821, 'target5': 0, 'corrAns5': 'n', 'index6': 0, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.7589098678514542, 'target1': 0, 'corrAns1': 'n', 'index2': 0.37895679136595306, 'target2': 0, 'corrAns2': 'n', 'index3': 0.693201780065275, 'target3': 0, 'corrAns3': 'n', 'index4': 0.14642128776860575, 'target4': 0, 'corrAns4': 'n', 'index5': 0.791121375188627, 'target5': 0, 'corrAns5': 'n', 'index6': 0.03218949228871981, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.20150103279683151, 'target1': 1, 'corrAns1': 'm', 'index2': 0.7249723680930298, 'target2': 1, 'corrAns2': 'm', 'index3': 0.6331688308596821, 'target3': 0, 'corrAns3': 'n', 'index4': 0.792287329714208, 'target4': 0, 'corrAns4': 'n', 'index5': 0.3361454606401951, 'target5': 0, 'corrAns5': 'n', 'index6': 0.5229580472533158, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.045185130807352536, 'target1': 0, 'corrAns1': 'n', 'index2': 0.14300649265399124, 'target2': 0, 'corrAns2': 'n', 'index3': 0.8319565547701159, 'target3': 1, 'corrAns3': 'm', 'index4': 0.007543786557396515, 'target4': 1, 'corrAns4': 'm', 'index5': 0.2545159670625089, 'target5': 1, 'corrAns5': 'm', 'index6': 0.07456002398357564, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.6034314175425841, 'target1': 0, 'corrAns1': 'n', 'index2': 0.4993316327865476, 'target2': 0, 'corrAns2': 'n', 'index3': 0.2257948943362459, 'target3': 0, 'corrAns3': 'n', 'index4': 0.6561751540459435, 'target4': 0, 'corrAns4': 'n', 'index5': 0.6132737157878076, 'target5': 0, 'corrAns5': 'n', 'index6': 0.6951959508523928, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.38201112656593095, 'target1': 0, 'corrAns1': 'n', 'index2': 0.39343784648220637, 'target2': 0, 'corrAns2': 'n', 'index3': 0.5771050442671594, 'target3': 1, 'corrAns3': 'm', 'index4': 0.19778365065818737, 'target4': 0, 'corrAns4': 'n', 'index5': 0.32093053612181144, 'target5': 0, 'corrAns5': 'n', 'index6': 0.9855376139082378, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.5679354208989069, 'target1': 1, 'corrAns1': 'm', 'index2': 0.16088907214985848, 'target2': 1, 'corrAns2': 'm', 'index3': 0.4425435468904879, 'target3': 0, 'corrAns3': 'n', 'index4': 0.8043058919377619, 'target4': 0, 'corrAns4': 'n', 'index5': 0.588777531555984, 'target5': 1, 'corrAns5': 'm', 'index6': 0.7525847388532929, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.07839571844617144, 'target1': 0, 'corrAns1': 'n', 'index2': 0.021969342064531272, 'target2': 0, 'corrAns2': 'n', 'index3': 0.9011826878914182, 'target3': 1, 'corrAns3': 'm', 'index4': 0.8197402707699106, 'target4': 1, 'corrAns4': 'm', 'index5': 0.29236391576499565, 'target5': 1, 'corrAns5': 'm', 'index6': 0.8986192940224279, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.9378083929401448, 'target1': 1, 'corrAns1': 'm', 'index2': 0.25238245193100917, 'target2': 1, 'corrAns2': 'm', 'index3': 0.975908078770394, 'target3': 0, 'corrAns3': 'n', 'index4': 0.9384173294163008, 'target4': 1, 'corrAns4': 'm', 'index5': 0.2260295309436373, 'target5': 0, 'corrAns5': 'n', 'index6': 0.8505469096571825, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.6443461858056777, 'target1': 0, 'corrAns1': 'n', 'index2': 0.45280774695267134, 'target2': 1, 'corrAns2': 'm', 'index3': 0.8414234483708202, 'target3': 1, 'corrAns3': 'm', 'index4': 0.11570566299571905, 'target4': 0, 'corrAns4': 'n', 'index5': 0.8055340248245443, 'target5': 0, 'corrAns5': 'n', 'index6': 0.7175421318317743, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.785272496117033, 'target1': 1, 'corrAns1': 'm', 'index2': 0.1643000162739764, 'target2': 1, 'corrAns2': 'm', 'index3': 0.38920212055552716, 'target3': 0, 'corrAns3': 'n', 'index4': 0.28276433914671784, 'target4': 1, 'corrAns4': 'm', 'index5': 0.14785240463669236, 'target5': 0, 'corrAns5': 'n', 'index6': 0.4520874645288063, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.06517023881574002, 'target1': 1, 'corrAns1': 'm', 'index2': 0.5358713303825993, 'target2': 0, 'corrAns2': 'n', 'index3': 0.023753409542769832, 'target3': 1, 'corrAns3': 'm', 'index4': 0.718900529127977, 'target4': 1, 'corrAns4': 'm', 'index5': 0.7139337982046425, 'target5': 0, 'corrAns5': 'n', 'index6': 0.16333057723272737, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.2907906083792805, 'target1': 0, 'corrAns1': 'n', 'index2': 0.8686570719786669, 'target2': 0, 'corrAns2': 'n', 'index3': 0.5820680237923987, 'target3': 1, 'corrAns3': 'm', 'index4': 0.07464405712910904, 'target4': 0, 'corrAns4': 'n', 'index5': 0.12560015329090846, 'target5': 1, 'corrAns5': 'm', 'index6': 0.10518828242675238, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.16999003920511357, 'target1': 1, 'corrAns1': 'm', 'index2': 0.15193366460938484, 'target2': 0, 'corrAns2': 'n', 'index3': 0.33731079415967846, 'target3': 1, 'corrAns3': 'm', 'index4': 0.44211942164673346, 'target4': 0, 'corrAns4': 'n', 'index5': 0.540533675213853, 'target5': 1, 'corrAns5': 'm', 'index6': 0.6813710945051835, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.5879184380954892, 'target1': 0, 'corrAns1': 'n', 'index2': 0.5213963998366227, 'target2': 0, 'corrAns2': 'n', 'index3': 0.2945675469286627, 'target3': 0, 'corrAns3': 'n', 'index4': 0.2594591001408091, 'target4': 0, 'corrAns4': 'n', 'index5': 0.2944336930327597, 'target5': 0, 'corrAns5': 'n', 'index6': 0.2018574437790971, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.6749698341457155, 'target1': 1, 'corrAns1': 'm', 'index2': 0.2481828234274447, 'target2': 0, 'corrAns2': 'n', 'index3': 0.9837699674630056, 'target3': 0, 'corrAns3': 'n', 'index4': 0.7454401923300419, 'target4': 0, 'corrAns4': 'n', 'index5': 0.5941154915059351, 'target5': 1, 'corrAns5': 'm', 'index6': 0.2597714025960871, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.022401323453319577, 'target1': 1, 'corrAns1': 'm', 'index2': 0.292398089892276, 'target2': 0, 'corrAns2': 'n', 'index3': 0.7768967721621728, 'target3': 1, 'corrAns3': 'm', 'index4': 0.33111483485962234, 'target4': 0, 'corrAns4': 'n', 'index5': 0.9327812424127618, 'target5': 1, 'corrAns5': 'm', 'index6': 0.5690711480622059, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.2574968215137513, 'target1': 0, 'corrAns1': 'n', 'index2': 0.6917457030633252, 'target2': 0, 'corrAns2': 'n', 'index3': 0.14164234702397982, 'target3': 0, 'corrAns3': 'n', 'index4': 0.147079979382296, 'target4': 1, 'corrAns4': 'm', 'index5': 0.25554522492665166, 'target5': 1, 'corrAns5': 'm', 'index6': 0.6462479653124774, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.6294289970983117, 'target1': 0, 'corrAns1': 'n', 'index2': 0.2954932937435317, 'target2': 0, 'corrAns2': 'n', 'index3': 0.7577817434328354, 'target3': 0, 'corrAns3': 'n', 'index4': 0.24158061347693316, 'target4': 1, 'corrAns4': 'm', 'index5': 0.2171269328962907, 'target5': 0, 'corrAns5': 'n', 'index6': 0.11499933441816257, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.4143975053376412, 'target1': 1, 'corrAns1': 'm', 'index2': 0.6038170637689866, 'target2': 0, 'corrAns2': 'n', 'index3': 0.6793716695122275, 'target3': 0, 'corrAns3': 'n', 'index4': 0.7734168548743432, 'target4': 0, 'corrAns4': 'n', 'index5': 0.2986932233191588, 'target5': 1, 'corrAns5': 'm', 'index6': 0.631940143726492, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.39860197625534866, 'target1': 1, 'corrAns1': 'm', 'index2': 0.8832418946555168, 'target2': 1, 'corrAns2': 'm', 'index3': 0.29352550080300344, 'target3': 0, 'corrAns3': 'n', 'index4': 0.6393489262993893, 'target4': 1, 'corrAns4': 'm', 'index5': 0.14333390615894748, 'target5': 0, 'corrAns5': 'n', 'index6': 0.12834468171849012, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.4809999782754453, 'target1': 1, 'corrAns1': 'm', 'index2': 0.9427706609816414, 'target2': 0, 'corrAns2': 'n', 'index3': 0.9808740281544716, 'target3': 0, 'corrAns3': 'n', 'index4': 0.3326708436303565, 'target4': 0, 'corrAns4': 'n', 'index5': 0.2764090856811139, 'target5': 0, 'corrAns5': 'n', 'index6': 0.5924476371952236, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.8440387578857942, 'target1': 1, 'corrAns1': 'm', 'index2': 0.13167922994602677, 'target2': 1, 'corrAns2': 'm', 'index3': 0.9798534464591155, 'target3': 0, 'corrAns3': 'n', 'index4': 0.4715776032295247, 'target4': 1, 'corrAns4': 'm', 'index5': 0.9588474620406153, 'target5': 0, 'corrAns5': 'n', 'index6': 0.1085641896533861, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.9402671846599134, 'target1': 0, 'corrAns1': 'n', 'index2': 0.1315306244978579, 'target2': 1, 'corrAns2': 'm', 'index3': 0.5475866968579104, 'target3': 0, 'corrAns3': 'n', 'index4': 0.29922482687446517, 'target4': 0, 'corrAns4': 'n', 'index5': 0.5764731622400194, 'target5': 1, 'corrAns5': 'm', 'index6': 0.43178078718376167, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.7009967874671631, 'target1': 0, 'corrAns1': 'n', 'index2': 0.1557420722840931, 'target2': 0, 'corrAns2': 'n', 'index3': 0.8630042334316276, 'target3': 0, 'corrAns3': 'n', 'index4': 0.5897098389492615, 'target4': 0, 'corrAns4': 'n', 'index5': 0.9956066847863959, 'target5': 0, 'corrAns5': 'n', 'index6': 0.5333414853801092, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.6402662429476803, 'target1': 1, 'corrAns1': 'm', 'index2': 0.6493542048609423, 'target2': 0, 'corrAns2': 'n', 'index3': 0.014049348389917116, 'target3': 0, 'corrAns3': 'n', 'index4': 0.4070440459350426, 'target4': 1, 'corrAns4': 'm', 'index5': 0.33330975967690757, 'target5': 0, 'corrAns5': 'n', 'index6': 0.5511390168726203, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.9263471308759321, 'target1': 1, 'corrAns1': 'm', 'index2': 0.12277847984512891, 'target2': 1, 'corrAns2': 'm', 'index3': 0.0074248341707151555, 'target3': 1, 'corrAns3': 'm', 'index4': 0.03276675681809249, 'target4': 0, 'corrAns4': 'n', 'index5': 0.3195623842597741, 'target5': 1, 'corrAns5': 'm', 'index6': 0.6013888877227571, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.3549695568018525, 'target1': 1, 'corrAns1': 'm', 'index2': 0.06673679883880113, 'target2': 0, 'corrAns2': 'n', 'index3': 0.7622870137236947, 'target3': 0, 'corrAns3': 'n', 'index4': 0.9696414052026306, 'target4': 1, 'corrAns4': 'm', 'index5': 0.1722341912935521, 'target5': 1, 'corrAns5': 'm', 'index6': 0.005337424463060514, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.27942224842115215, 'target1': 0, 'corrAns1': 'n', 'index2': 0.4412803548374098, 'target2': 0, 'corrAns2': 'n', 'index3': 0.10364302224347133, 'target3': 1, 'corrAns3': 'm', 'index4': 0.8019875834667123, 'target4': 0, 'corrAns4': 'n', 'index5': 0.2043282705089159, 'target5': 0, 'corrAns5': 'n', 'index6': 0.5562619141877831, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.5345042730759565, 'target1': 0, 'corrAns1': 'n', 'index2': 0.6128168599796129, 'target2': 1, 'corrAns2': 'm', 'index3': 0.744760923827912, 'target3': 1, 'corrAns3': 'm', 'index4': 0.8650691385688902, 'target4': 0, 'corrAns4': 'n', 'index5': 0.12838620918324595, 'target5': 1, 'corrAns5': 'm', 'index6': 0.2966958531619732, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.8035395782140355, 'target1': 0, 'corrAns1': 'n', 'index2': 0.99430126059832, 'target2': 0, 'corrAns2': 'n', 'index3': 0.3475444165983408, 'target3': 0, 'corrAns3': 'n', 'index4': 0.9508981363091504, 'target4': 1, 'corrAns4': 'm', 'index5': 0.48339775330128165, 'target5': 0, 'corrAns5': 'n', 'index6': 0.1737164100560259, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.7472402001046337, 'target1': 0, 'corrAns1': 'n', 'index2': 0.8589573785026058, 'target2': 1, 'corrAns2': 'm', 'index3': 0.014058014859045564, 'target3': 0, 'corrAns3': 'n', 'index4': 0.461379711425855, 'target4': 1, 'corrAns4': 'm', 'index5': 0.4687509056631982, 'target5': 1, 'corrAns5': 'm', 'index6': 0.4737857422238867, 'target6': 1, 'corrAns6': 'm'}, {'index1': 0.4920239686050969, 'target1': 0, 'corrAns1': 'n', 'index2': 0.48509195207838784, 'target2': 0, 'corrAns2': 'n', 'index3': 0.6128492189991643, 'target3': 0, 'corrAns3': 'n', 'index4': 0.7391275491446286, 'target4': 1, 'corrAns4': 'm', 'index5': 0.6781033165789321, 'target5': 0, 'corrAns5': 'n', 'index6': 0.9877135448692379, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.30084828614376424, 'target1': 0, 'corrAns1': 'n', 'index2': 0.5057530804197019, 'target2': 0, 'corrAns2': 'n', 'index3': 0.006714676868820102, 'target3': 1, 'corrAns3': 'm', 'index4': 0.195586694134827, 'target4': 0, 'corrAns4': 'n', 'index5': 0.3614308448842639, 'target5': 1, 'corrAns5': 'm', 'index6': 0.05232641213124589, 'target6': 0, 'corrAns6': 'n'}, {'index1': 0.937600089754637, 'target1': 0, 'corrAns1': 'n', 'index2': 0.8122656683777646, 'target2': 1, 'corrAns2': 'm', 'index3': 0.509148275997293, 'target3': 1, 'corrAns3': 'm', 'index4': 0.20059023524466413, 'target4': 1, 'corrAns4': 'm', 'index5': 0.513777536622679, 'target5': 0, 'corrAns5': 'n', 'index6': 0.06283892254501999, 'target6': 1, 'corrAns6': 'm'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="con_back.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_2" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="Nback"/>
+    <LoopTerminator name="trials_2"/>
+    <LoopTerminator name="choose"/>
+    <Routine name="Endexp"/>
   </Flow>
 </PsychoPy2experiment>

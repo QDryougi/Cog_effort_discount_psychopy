@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on February 18, 2024, at 12:18
+    on February 18, 2024, at 15:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -279,8 +279,8 @@ for thisBlock in blocks:
     "你即将完成" + color_instr + "任务。"\
     "该任务为" + str(n) + "-back任务。\n" +\
     "你需要将屏幕上出现的字母与前"+ str(n) +\
-    "个字母进行比\n较，如果相同，则按N键，如果不同" +\
-    "则按M键。\n\n例如，第1个字母是P，第" + str(n+1) +\
+    "个字母进行比\n较，如果相同，则按M键，如果不同" +\
+    "则按N键。\n\n例如，第1个字母是P，第" + str(n+1) +\
     "个字母也是P，则为\n相同，否则为不同。无法进行" +\
     "比较的默认为不同。\n\n" +\
     "如果理解了实验任务，请按空格进入实验。"
@@ -376,7 +376,7 @@ for thisBlock in blocks:
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('con_back.xlsx', selection='1:15'),
+        trialList=data.importConditions('con_back.xlsx'),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
